@@ -1,14 +1,9 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Playfair_Display } from 'next/font/google';
+import { Playfair_Display } from 'next/font/google';
 import './globals.css';
 
 const playfairDisplay = Playfair_Display({
   variable: '--font-playfair-display',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
   subsets: ['latin'],
 });
 
@@ -24,9 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body
-        className={`${playfairDisplay.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${playfairDisplay.variable} antialiased`}>
         {children}
       </body>
     </html>

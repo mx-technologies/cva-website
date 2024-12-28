@@ -1,4 +1,4 @@
-import { Geist, Open_Sans, Playfair_Display } from 'next/font/google';
+import { Open_Sans, Playfair_Display } from 'next/font/google';
 
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';

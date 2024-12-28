@@ -1,11 +1,8 @@
 'use client';
 
-import Link from 'next/link';
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetTrigger, SheetContent } from '@/components/ui/sheet';
 import { openSans } from '@/lib/utils';
-import { usePathname } from 'next/navigation';
 import NavbarItem from './navbar-item';
 
 const navbarRoutes = [
