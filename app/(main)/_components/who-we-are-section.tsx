@@ -1,11 +1,12 @@
 import { openSans, playfairDisplay } from '@/lib/utils';
+import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function WhoWeAreSection() {
   return (
-    <div className='bg-gray-50 py-12 px-6 md:py-20 md:px-16'>
-      <div className='max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10'>
+    <div className='bg-gray-50 py-12 md:py-20 px-8 md:px-16 lg:px-32'>
+      <div className='max-w-7xl mx-auto flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10'>
         {/* Left Section */}
         <div className='bg-white rounded-lg shadow-md p-6 lg:p-10'>
           <h2 className={`text-primary-main mb-4 ${openSans.className}`}>
@@ -46,7 +47,7 @@ export default function WhoWeAreSection() {
         </div>
 
         {/* Right Section */}
-        <div className='grid grid-cols-1 gap-6 lg:gap-10 bg-white rounded-lg shadow-md p-4 lg:p-6'>
+        <div className='grid grid-cols-1 gap-6 bg-white rounded-lg shadow-md p-4 lg:p-6'>
           {/* Top Image */}
           <div className='relative rounded-lg overflow-hidden'>
             <Image
@@ -61,31 +62,13 @@ export default function WhoWeAreSection() {
           </div>
 
           {/* Mission and Vision Cards */}
-          <div className='grid grid-cols-2 gap-6'>
-            {/* Mission Card */}
-            <div className='bg-card-light rounded-lg shadow-md p-6 text-left'>
-              <h3
-                className={`text-2xl md:text-4xl font-semibold text-gray-900 mb-4 ${playfairDisplay.className}`}
-              >
-                Our <br />
-                Mission
-              </h3>
-              <p
-                className={`text-gray-700 leading-relaxed ${openSans.className}`}
-              >
-                To disciple and equip Christians to live out God’s purpose for
-                their lives and to establish His victory over the kingdom of
-                darkness in every space and every sphere.
-              </p>
-            </div>
-
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
             {/* Vision Card */}
             <div className='bg-card-light rounded-lg shadow-md p-6 text-left'>
               <h3
-                className={`text-2xl md:text-4xl font-semibold text-gray-900 mb-4 ${playfairDisplay.className}`}
+                className={`text-2xl md:text-4xl font-semibold text-gray-900 mb-4 flex md:flex-col ${playfairDisplay.className}`}
               >
-                Our <br />
-                Vision
+                <span>Our</span> Vision
               </h3>
               <p
                 className={`text-gray-700 leading-relaxed ${openSans.className}`}
@@ -95,17 +78,39 @@ export default function WhoWeAreSection() {
                 into His kingdom and that of His Son, Jesus Christ. (Rev. 11:15)
               </p>
             </div>
+
+            {/* Mission Card */}
+            <div className='bg-card-light rounded-lg shadow-md p-6 text-left'>
+              <h3
+                className={`text-2xl md:text-4xl font-semibold text-gray-900 mb-4 flex md:flex-col ${playfairDisplay.className}`}
+              >
+                <span>Our</span> Mission
+              </h3>
+              <p
+                className={`text-gray-700 leading-relaxed ${openSans.className}`}
+              >
+                To disciple and equip Christians to live out God’s purpose for
+                their lives and to establish His victory over the kingdom of
+                darkness in every space and every sphere.
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className='mt-8'>
+      <div className='mt-8 flex justify-center'>
         {/* Learn More Link */}
         <Link
           href='/learn-more'
-          className={`text-primary-main text-xl underline underline-offset-8 text-center block mt-4 hover:underline ${openSans.className}`}
+          className={`text-primary-main text-xl border-b-2 border-primary-main flex text-center mt-4 gap-2 ${openSans.className}`}
         >
-          Learn More →
+          Learn More
+          <Image
+            src={'arrow-right.svg'}
+            alt='arrow-right'
+            width='20'
+            height='1'
+          />
         </Link>
       </div>
     </div>

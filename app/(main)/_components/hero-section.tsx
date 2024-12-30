@@ -57,10 +57,10 @@ export default function HeroSection() {
         <h1
           className={`text-3xl md:text-6xl font-bold text-gray-900 ${playfairDisplay.className}`}
         >
-          <div className='mb-[-30] md:mb-[-40]'>Transforming Lives</div>
-          <br />
-          <div className='mb-[-30] md:mb-[-40]'>Through God’s Word</div>
-          <br />
+          <p className='mb-4 md:mb-8'>Transforming Lives</p>
+          {/* <br /> */}
+          <p className='mb-4 md:mb-8'>Through God’s Word</p>
+          {/* <br /> */}
           for{' '}
           <span className='relative inline-block'>
             {/* Word with Circle */}
@@ -78,7 +78,7 @@ export default function HeroSection() {
         </h1>
 
         <p
-          className={`mt-12 text-gray-800 md:text-gray-700 max-w-lg text-shadow ${openSans.className}`}
+          className={`mt-8 md:mt-12 text-gray-800 md:text-gray-700 max-w-lg text-shadow ${openSans.className}`}
         >
           till the knowledge of His glory fills the entire Earth!
         </p>
