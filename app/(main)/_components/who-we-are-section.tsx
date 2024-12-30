@@ -67,7 +67,7 @@ export default function WhoWeAreSection() {
               <h3
                 className={`text-2xl md:text-4xl font-semibold text-gray-900 mb-4 flex md:flex-col ${playfairDisplay.className}`}
               >
-                <span>Our</span> Vision
+                <span>Our&nbsp;</span> Vision
               </h3>
               <p
                 className={`text-gray-700 leading-relaxed ${openSans.className}`}
@@ -83,7 +83,7 @@ export default function WhoWeAreSection() {
               <h3
                 className={`text-2xl md:text-4xl font-semibold text-gray-900 mb-4 flex md:flex-col ${playfairDisplay.className}`}
               >
-                <span>Our</span> Mission
+                <span>Our&nbsp;</span> Mission
               </h3>
               <p
                 className={`text-gray-700 leading-relaxed ${openSans.className}`}
