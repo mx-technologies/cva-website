@@ -63,7 +63,10 @@ export default function Testimonies() {
           }}
           pagination={{ clickable: true }}
           autoplay={{ delay: 5000 }}
-          className='my-4 lg:my-12 py-4 lg:py-40'
+          className='my-4 lg:my-12'
+          style={{
+            paddingBottom: '40px',
+          }}
         >
           {testimonies.map((testimony, index) => (
             <SwiperSlide key={index}>

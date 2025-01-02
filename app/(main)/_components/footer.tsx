@@ -104,7 +104,7 @@ export default function Footer() {
               height='1'
               objectFit='cover'
             />
-            &nbsp; Christ's Victorious Army, 2024. All rights reserved
+            &nbsp; Christ&apos;s Victorious Army, 2024. All rights reserved
           </span>
           {/* Social Media Links */}
           <div className='flex justify-center lg:justify-end space-x-4'>
