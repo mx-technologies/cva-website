@@ -59,19 +59,19 @@ export default function OurProgramsSection() {
   };
 
   return (
-    <div className='bg-white py-12 md:py-20 pl-4 md:pl-16 lg:pl-32 overflow-hidden'>
-      <div className='pl-4 md:pl-20 ml-auto flex flex-col md:grid md:grid-cols-[1fr_2fr] gap-10 items-center'>
+    <div className='bg-white py-12 md:py-20 pl-4 md:pl-16 lg:pl-32'>
+      <div className='p-2 md:pl-20 ml-auto flex flex-col md:grid md:grid-cols-[1fr_2fr] gap-10 items-center'>
         {/* Left Section */}
         <div className='flex gap-3 flex-1 flex-col md:flex-row'>
           <div className='w-full md:w-72'>
             <h2
-              className={`text-3xl md:text-5xl font-bold text-gray-900 mb-4 ${playfairDisplay.className}`}
+              className={`text-center md:text-left text-3xl md:text-5xl font-bold text-gray-900 mb-4 ${playfairDisplay.className}`}
             >
               Our <br />
               <span className=''>Programs</span>
             </h2>
             <div
-              className={`w-full text-gray-700 leading-relaxed ${openSans.className}`}
+              className={`text-center md:text-left w-full text-gray-700 leading-relaxed ${openSans.className}`}
             >
               Experience God’s presence, connect with a loving community, and
               discover opportunities to deepen your faith and make an impact for
@@ -83,20 +83,20 @@ export default function OurProgramsSection() {
             alt='arrow-diagonal'
             width='150'
             height='50'
-            className='self-center'
+            className='self-center hidden md:block'
           />
         </div>
 
         {/* Right Section */}
-        <div className='flex flex-2 space-y-4 flex-col md:flex-row gap-10 overflow-hidden'>
+        <div className='flex space-y-4 flex-col md:flex-row gap-10'>
           {/* Main Carousel View */}
-          <div className='border border-primary-main rounded-3xl p-4 w-full md:w-[800px]'>
-            <div className='relative overflow-hidden rounded-lg mb-4'>
+          <div className='border border-primary-main rounded-3xl p-4 w-full md:w-[300px] m-auto'>
+            <div className='relative rounded-lg mb-4'>
               <Image
                 src={carouselItems[currentIndex].image}
                 alt={carouselItems[currentIndex].title}
-                width={800}
-                height={400}
+                width={300}
+                height={200}
                 objectFit='cover'
                 className='rounded-lg'
               />
@@ -119,16 +119,16 @@ export default function OurProgramsSection() {
           </div>
 
           {/* Thumbnails */}
-          <div className='flex flex-col'>
-            <div className='flex items-center h-full overflow-x-scroll'>
+          <div className='flex flex-col md:w-[600px]'>
+            <div className='md:flex hidden items-center h-full md:overflow-x-scroll space-x-2'>
               {carouselItems.map((item, index) => (
                 <div
                   key={index}
-                  className={`relative overflow-hidden rounded-lg mr-8 border ${
+                  className={`relative overflow-hidden rounded-lg border ${
                     currentIndex === index
                       ? 'border-primary-main'
                       : 'border-gray-300'
-                  } cursor-pointer w-56 h-56`}
+                  } cursor-pointer w-[200] h-[200]`}
                   onClick={() => handleThumbnailClick(index)}
                 >
                   <Image
@@ -136,7 +136,7 @@ export default function OurProgramsSection() {
                     alt={item.title}
                     layout='fill'
                     objectFit='cover'
-                    className='rounded-lg w-full'
+                    className='rounded-lg'
                   />
                 </div>
               ))}

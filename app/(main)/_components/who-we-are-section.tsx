@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function WhoWeAreSection() {
   return (
-    <div className='bg-gray-50 py-12 md:py-20 px-8 md:px-16 lg:px-32'>
+    <div className='bg-gray-50 py-12 md:py-20 px-8 md:px-16 lg:px-16'>
       <div className='max-w-7xl mx-auto flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10'>
         {/* Left Section */}
         <div className='bg-white rounded-lg shadow-md p-6 lg:p-10'>

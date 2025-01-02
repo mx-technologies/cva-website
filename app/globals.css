@@ -83,3 +83,13 @@ body {
 .animate-slide-up {
   animation: slide-up 5s linear;
 }
+
+/* Custom styles for Swiper pagination bullets */
+.swiper-pagination-bullet {
+  background-color: #d1d5db; /* Light gray for inactive bullets */
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ffd700 !important; /* Yellow for the active bullet */
+}

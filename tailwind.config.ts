@@ -16,6 +16,7 @@ export default {
           main: '#8B0000',
           hover: '#8B0000',
         },
+        yellow: '#FFD700',
         card: {
           light: '#F5F5F5',
           foreground: 'hsl(var(--card-foreground))',

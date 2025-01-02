@@ -12,7 +12,7 @@ const navbarRoutes = [
   },
   {
     label: 'About us',
-    href: '/about',
+    href: '/about-us',
   },
   {
     label: 'Giving',
