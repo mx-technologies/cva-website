@@ -45,12 +45,15 @@ export default function HeroSection() {
             layout='fill'
             objectFit='cover'
             objectPosition='center'
-            className={`transition-opacity duration-1000 bg-[100%] ${
+            className={`transition-opacity duration-1000 ${
               index === currentImageIndex ? 'opacity-100' : 'opacity-0'
             }`}
           />
         ))}
       </div>
+
+      {/* Gradient Overlay */}
+      <div className='absolute inset-0 bg-gradient-to-t from-white/70 via-white/50 to-white/20 md:from-white/60 md:via-white/40 md:to-white/5'></div>
 
       {/* Content Section */}
       <div className='relative py-40 px-8 md:py-60 md:px-16 lg:px-32 flex flex-col justify-center'>
@@ -58,12 +61,9 @@ export default function HeroSection() {
           className={`text-3xl md:text-6xl font-bold text-gray-900 ${playfairDisplay.className}`}
         >
           <p className='mb-4 md:mb-8'>Transforming Lives</p>
-          {/* <br /> */}
           <p className='mb-4 md:mb-8'>Through God’s Word</p>
-          {/* <br /> */}
           for{' '}
           <span className='relative inline-block'>
-            {/* Word with Circle */}
             <span className='pl-4 px-5'>
               {words[currentWordIndex]} {/* Dynamic Word */}
             </span>

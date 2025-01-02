@@ -8,24 +8,24 @@ export default function Footer() {
     <footer className='container mx-auto bg-white text-gray-[#0F0000] px-8 md:px-16 lg:px-16 py-12'>
       <div className={`py-12 ${openSans.className}`}>
         {/* Footer Sections */}
-        <div className='flex flex-col md:flex-row gap-10 md:gap-0'>
+        <div className='flex flex-col lg:flex-row gap-10 lg:gap-0'>
           <div className='flex-[3] grid grid-cols-1 md:grid-cols-3 gap-8 text-left'>
             {/* Organization Section */}
             <div>
               <h5 className='font-bold text-lg'>Organization</h5>
               <ul className={`mt-4 space-y-2 text-[#666666]`}>
                 <li>
-                  <a href='#' className='hover:text-red-600'>
+                  <a href='#' className='hover:text-primary-hover'>
                     Contact Us
                   </a>
                 </li>
                 <li>
-                  <a href='#' className='hover:text-red-600'>
+                  <a href='#' className='hover:text-primary-hover'>
                     Donations
                   </a>
                 </li>
                 <li>
-                  <a href='#' className='hover:text-red-600'>
+                  <a href='#' className='hover:text-primary-hover'>
                     Blog & News
                   </a>
                 </li>
@@ -37,17 +37,17 @@ export default function Footer() {
               <h5 className='font-bold text-lg'>Resources</h5>
               <ul className='mt-4 space-y-2 text-[#666666]'>
                 <li>
-                  <a href='#' className='hover:text-red-600'>
+                  <a href='#' className='hover:text-primary-hover'>
                     Documentation
                   </a>
                 </li>
                 <li>
-                  <a href='#' className='hover:text-red-600'>
+                  <a href='#' className='hover:text-primary-hover'>
                     Papers
                   </a>
                 </li>
                 <li>
-                  <a href='#' className='hover:text-red-600'>
+                  <a href='#' className='hover:text-primary-hover'>
                     Guidelines
                   </a>
                 </li>
@@ -59,17 +59,17 @@ export default function Footer() {
               <h5 className='font-bold text-lg'>Legal</h5>
               <ul className='mt-4 space-y-2 text-[#666666]'>
                 <li>
-                  <a href='#' className='hover:text-red-600'>
+                  <a href='#' className='hover:text-primary-hover'>
                     Terms of Service
                   </a>
                 </li>
                 <li>
-                  <a href='#' className='hover:text-red-600'>
+                  <a href='#' className='hover:text-primary-hover'>
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href='#' className='hover:text-red-600'>
+                  <a href='#' className='hover:text-primary-hover'>
                     Cookies Policy
                   </a>
                 </li>
@@ -80,11 +80,11 @@ export default function Footer() {
           {/* Newsletter and Social Media */}
           <div className='flex flex-col gap-3 justify-start'>
             {/* Newsletter Section */}
-            <div className='flex items-center w-full lg:w-auto gap-3'>
+            <div className='flex items-center w-full md:w-[50%] lg:w-auto gap-3'>
               <input
                 type='email'
                 placeholder='Enter your email'
-                className='flex-grow px-4 py-2 border border-[#666666] rounded-full text-sm focus:outline-none'
+                className=' flex-grow px-4 py-2 border border-[#666666] rounded-full text-sm focus:outline-none'
               />
               <button className='bg-primary-main rounded-full text-white px-6 py-2 text-sm hover:bg-primary-hover'>
                 Send
@@ -95,7 +95,7 @@ export default function Footer() {
         </div>
 
         {/* Footer Bottom */}
-        <div className='flex flex-col md:flex-row justify-between mt-24 border-t border-gray-200 pt-6 text-center text-sm text-gray-500 gap-4'>
+        <div className='flex flex-col md:flex-lg justify-between  mt-4 md:mt-12 lg:mt-24 border-t border-gray-200 pt-6 text-center text-sm text-gray-500 gap-4'>
           <span className='flex flex-col md:flex-row items-center gap-1 md:gap-0'>
             <Image
               src={'/logo.png'}
