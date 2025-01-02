@@ -53,7 +53,7 @@ export default function HeroSection() {
       </div>
 
       {/* Content Section */}
-      <div className='relative bg-gradient-to-r from-white to-transparent py-40 px-8 md:py-60 md:px-16 lg:px-32 flex flex-col justify-center'>
+      <div className='relative py-40 px-8 md:py-60 md:px-16 lg:px-32 flex flex-col justify-center'>
         <h1
           className={`text-3xl md:text-6xl font-bold text-gray-900 ${playfairDisplay.className}`}
         >
