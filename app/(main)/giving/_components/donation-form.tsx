@@ -16,7 +16,7 @@ export default function DonationForm() {
         </h1>
         <p className={`text-center text-gray-600 mb-6 ${openSans.className}`}>
           Every gift you give goes beyond monetary value—it changes lives.
-          Here's how your contributions make a difference:
+          Here&apos;s how your contributions make a difference:
         </p>
       </div>
       <div
@@ -44,17 +44,17 @@ export default function DonationForm() {
         {/* Dynamic Content Based on Active Tab */}
         {activeTab === 'Cash' && (
           <p className='text-center text-gray-600 mb-4'>
-            You’ve selected Cash as your giving method.
+            You&apos;ve selected Cash as your giving method.
           </p>
         )}
         {activeTab === 'Transfer' && (
           <p className='text-center text-gray-600 mb-4'>
-            You’ve selected Transfer as your giving method.
+            You&apos;ve selected Transfer as your giving method.
           </p>
         )}
         {activeTab === 'Paypal' && (
           <p className='text-center text-gray-600 mb-4'>
-            You’ve selected PayPal as your giving method.
+            You&apos;ve selected PayPal as your giving method.
           </p>
         )}
 

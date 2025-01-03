@@ -10,7 +10,7 @@ export function cn(...inputs: ClassValue[]) {
 export const playfairDisplay = Playfair_Display({
   variable: '--font-playfair-display',
   subsets: ['latin'],
-  weight: '500',
+  weight: '600',
 });
 
 export const openSans = Open_Sans({

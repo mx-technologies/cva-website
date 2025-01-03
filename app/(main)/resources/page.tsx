@@ -1,3 +1,9 @@
+import HeroSection from './_components/hero-section';
+
 export default function Resources() {
-  return <main>Resources</main>;
+  return (
+    <main>
+      <HeroSection />
+    </main>
+  );
 }
