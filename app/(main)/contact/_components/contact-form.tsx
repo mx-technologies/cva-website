@@ -6,7 +6,7 @@ const ContactForm = () => {
     <section className='w-full pt-12 px-8 md:px-36 bg-white rounded-lg'>
       {/* Header */}
       <h1
-        className={`text-5xl font-bold text-black ${playfairDisplay.className}`}
+        className={`text-3xl md:text-5xl font-bold text-black ${playfairDisplay.className}`}
       >
         Get in Touch
       </h1>
@@ -96,7 +96,7 @@ const ContactForm = () => {
       </form>
 
       {/* Footer */}
-      <div className={`mt-8 text-center ${openSans.className}`}>
+      <div className={`my-8 text-center ${openSans.className}`}>
         <div className='relative'>
           <hr className='bg-[#999999]' />
           <div className='flex justify-center absolute top-[-14] left-0 right-0 text-gray-600'>
