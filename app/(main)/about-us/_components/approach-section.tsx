@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function ApproachSection() {
   return (
-    <section className='container py-16 px-6 md:px-16 lg:px-16 mx-auto'>
+    <section className='container bg-[#F5F5F5] py-16 px-6 md:px-16 lg:px-16 mx-auto'>
       {/* Section Header */}
       <div className='text-center mb-12 max-w-4xl mx-auto'>
         <h2
@@ -22,9 +22,9 @@ export default function ApproachSection() {
 
       {/* Grid Layout */}
       <div className='flex justify-center mt-10'>
-        <div className='grid grid-rows-2 grid-flow-col gap-6 w-full'>
+        <div className='grid md:grid-rows-2 md:grid-flow-col gap-6 w-full'>
           {/* Item 1 */}
-          <div className='col-span-2 relative group overflow-hidden rounded-lg shadow-lg'>
+          <div className='md:col-span-2 relative group overflow-hidden rounded-lg shadow-lg'>
             <Image
               src='/about-us/approach-i1.png' // Replace with your actual image path
               alt='Prayer and Intercession'
@@ -34,7 +34,7 @@ export default function ApproachSection() {
             />
             <div className='absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white p-6 gap-3'>
               <h3
-                className={`text-5xl font-bold mb-2 ${playfairDisplay.className}`}
+                className={`text-3xl md:text-5xl font-bold mb-2 ${playfairDisplay.className}`}
               >
                 Prayer and Intercession
               </h3>
@@ -48,7 +48,7 @@ export default function ApproachSection() {
           </div>
 
           {/* Item 2 */}
-          <div className=' col-span-2 relative group overflow-hidden rounded-lg shadow-lg'>
+          <div className='md:col-span-2 relative group overflow-hidden rounded-lg shadow-lg'>
             <Image
               src='/about-us/approach-i2.png' // Replace with your actual image path
               alt='Evangelism and Outreaches'
@@ -58,7 +58,7 @@ export default function ApproachSection() {
             />
             <div className='absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white p-6 gap-3'>
               <h3
-                className={`text-5xl font-bold mb-2 ${playfairDisplay.className}`}
+                className={`text-3xl md:text-5xl font-bold mb-2 ${playfairDisplay.className}`}
               >
                 Evangelism and Outreaches
               </h3>
@@ -72,7 +72,7 @@ export default function ApproachSection() {
           </div>
 
           {/* Item 3 */}
-          <div className='row-span-2 relative group overflow-hidden rounded-lg shadow-lg'>
+          <div className='md:row-span-2 relative group overflow-hidden rounded-lg shadow-lg'>
             <Image
               src='/about-us/approach-i3.png' // Replace with your actual image path
               alt='Teaching the Word'
@@ -82,7 +82,7 @@ export default function ApproachSection() {
             />
             <div className='absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white p-6 gap-3'>
               <h3
-                className={`text-5xl font-bold mb-2 ${playfairDisplay.className}`}
+                className={`text-3xl md:text-5xl font-bold mb-2 ${playfairDisplay.className}`}
               >
                 Teaching the Word
               </h3>

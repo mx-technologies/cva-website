@@ -19,7 +19,7 @@ export default function HeroSection() {
   useEffect(() => {
     const wordInterval = setInterval(() => {
       setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 2000); // Change word every 2 seconds
+    }, 5000); // Change word every 2 seconds
 
     const imageInterval = setInterval(() => {
       setCurrentImageIndex(

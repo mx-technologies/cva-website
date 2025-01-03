@@ -8,7 +8,7 @@ export default function HeroSection() {
     <div className='relative bg-white'>
       <div className='absolute inset-0'>
         <Image
-          src={'/images/about-b1.png'}
+          src={'/resources/hero.png'}
           alt={`Background`}
           layout='fill'
           objectFit='cover'
@@ -25,11 +25,11 @@ export default function HeroSection() {
         <h1
           className={`text-3xl md:text-6xl font-bold text-gray-900 ${playfairDisplay.className}`}
         >
-          <p className='mb-4 md:mb-8'>Rooted in Faith,</p>
+          <p className='mb-4 md:mb-8'>Equip Yourself</p>
           <p className='mb-4 md:mb-8'>
-            Growing in{' '}
+            with God&apos;s{' '}
             <span className='relative inline-block'>
-              <span className='pl-5 px-5'>Love</span>
+              <span className='pl-5 px-5'>Word</span>
               <Image
                 src='/images/circle.png' // Replace with your circle image path
                 alt='Circle'
@@ -44,16 +44,15 @@ export default function HeroSection() {
         <p
           className={`mt-8 md:mt-10 text-gray-800 md:text-gray-700 max-w-lg text-shadow ${openSans.className}`}
         >
-          Discover the story, purpose, and people behind Christ’s Victorious
-          Army—a church dedicated to empowering lives through God’s truth, love,
-          and Spirit-led guidance.
+          Explore a wide range of resources to deepen your understanding,
+          strengthen your faith, and share the love of Christ with others.
         </p>
 
         <div>
           <button
             className={`mt-8 px-4 py-2 md:px-6 md:py-3 text-sm md:text-base bg-primary-main text-white font-semibold rounded-full hover:bg-red-700 transition ${openSans.className}`}
           >
-            Join Now
+            Explore Now
           </button>
         </div>
       </div>
