@@ -1,3 +1,11 @@
+import ContactForm from './_components/contact-form';
+import GoogleMap from './_components/google-map';
+
 export default function Contact() {
-  return <main>Contact</main>;
+  return (
+    <main className='flex flex-col-reverse md:flex-row'>
+      <ContactForm />
+      <GoogleMap />
+    </main>
+  );
 }

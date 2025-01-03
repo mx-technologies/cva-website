@@ -29,13 +29,13 @@ export default function HeroSection() {
           <p className='mb-4 md:mb-8'>
             with God&apos;s{' '}
             <span className='relative inline-block'>
-              <span className='pl-5 px-5'>Word</span>
+              <span className='pl-5 px-2'>Word</span>
               <Image
                 src='/images/circle.png' // Replace with your circle image path
                 alt='Circle'
                 width='1000' // Adjust size as necessary
                 height='60' // Adjust size as necessary
-                className='absolute top-0 left-0 z-10 translate-x-[-2%] translate-y-[4%]'
+                className='absolute top-0 left-0 z-10 translate-x-[3%] translate-y-[4%]'
               />
             </span>
           </p>
