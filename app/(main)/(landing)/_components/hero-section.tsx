@@ -64,15 +64,15 @@ export default function HeroSection() {
           <p className='mb-4 md:mb-8'>Through God’s Word</p>
           for{' '}
           <span className='relative inline-block'>
-            <span className='pl-4 px-5'>
+            <span className='pl-4 px-7'>
               {words[currentWordIndex]} {/* Dynamic Word */}
             </span>
             <Image
               src='/images/circle.png' // Replace with your circle image path
               alt='Circle'
-              width={400} // Adjust size as necessary
-              height={30} // Adjust size as necessary
-              className='absolute top-0 left-0 z-10 translate-x-[-2%] translate-y-[-20%]'
+              width={1000} // Adjust size as necessary
+              height={50} // Adjust size as necessary
+              className='absolute top-0 left-0 z-10 translate-x-[-2%] translate-y-[-10%]'
             />
           </span>
         </h1>
