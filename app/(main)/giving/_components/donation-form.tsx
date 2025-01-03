@@ -112,7 +112,7 @@ export default function DonationForm() {
                 <span className='text-gray-600 mr-2'>$</span>
                 <input
                   type='number'
-                  className='w-full focus:outline-none f'
+                  className='w-full focus:outline-none'
                   placeholder='Enter amount'
                 />
               </div>
