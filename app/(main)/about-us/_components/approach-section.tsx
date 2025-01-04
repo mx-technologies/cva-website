@@ -82,7 +82,7 @@ export default function ApproachSection() {
             />
             <div className='absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white p-6 gap-3'>
               <h3
-                className={`text-3xl md:text-5xl font-bold mb-2 ${playfairDisplay.className}`}
+                className={`text-3xl text-center md:text-5xl font-bold mb-2 ${playfairDisplay.className}`}
               >
                 Teaching the Word
               </h3>
