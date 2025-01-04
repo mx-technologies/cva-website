@@ -8,7 +8,7 @@ export default function HeroSection() {
     <div className='relative bg-white'>
       <div className='absolute inset-0'>
         <Image
-          src={'/images/about-b1.png'}
+          src={'/images/about-b1.jpeg'}
           alt={`Background`}
           layout='fill'
           objectFit='cover'
@@ -18,7 +18,7 @@ export default function HeroSection() {
       </div>
 
       {/* Gradient Overlay */}
-      <div className='absolute inset-0 bg-gradient-to-t from-white/70 via-white/50 to-white/20 md:from-white/80 md:via-white/60 md:to-white/15'></div>
+      <div className='absolute inset-0 bg-gradient-to-t from-white/90 via-white/70 to-white/20 md:from-white/80 md:via-white/70 md:to-white/15'></div>
 
       {/* Content Section */}
       <div className='relative py-40 px-8 md:py-60 md:px-16 lg:px-32 flex flex-col justify-center'>

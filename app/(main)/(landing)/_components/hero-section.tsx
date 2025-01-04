@@ -10,9 +10,9 @@ export default function HeroSection() {
 
   // Background images for the carousel
   const backgroundImages = [
-    '/images/b1.png',
-    '/images/b2.png',
-    '/images/b3.png',
+    '/images/b1.jpeg',
+    '/images/b2.jpeg',
+    '/images/b3.jpeg',
   ]; // Replace with your image paths
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -53,7 +53,7 @@ export default function HeroSection() {
       </div>
 
       {/* Gradient Overlay */}
-      <div className='absolute inset-0 bg-gradient-to-t from-white/70 via-white/50 to-white/20 md:from-white/60 md:via-white/40 md:to-white/5'></div>
+      <div className='absolute inset-0 bg-gradient-to-t from-white/70 via-white/70 to-white/20 md:from-white/90 md:via-white/80 md:to-white/5'></div>
 
       {/* Content Section */}
       <div className='relative py-40 px-8 md:py-60 md:px-16 lg:px-32 flex flex-col justify-center'>
@@ -61,7 +61,7 @@ export default function HeroSection() {
           className={`text-3xl md:text-6xl font-bold text-gray-900 ${playfairDisplay.className}`}
         >
           <p className='mb-4 md:mb-8'>Transforming Lives</p>
-          <p className='mb-4 md:mb-8'>Through God’s Word</p>
+          <p className='mb-4 md:mb-8'>Through God&apos;s Word</p>
           for{' '}
           <span className='relative inline-block'>
             <span className='pl-4 px-7'>

@@ -50,7 +50,7 @@ export default function WhoWeAreSection() {
           {/* Top Image */}
           <div className='relative rounded-lg overflow-hidden'>
             <Image
-              src='/images/wwa.png' // Replace with your image path
+              src='/images/wwa.jpeg' // Replace with your image path
               alt='Worship'
               layout='responsive'
               width={100}
