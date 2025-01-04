@@ -107,7 +107,7 @@ export default function OurStory() {
           <div className='flex flex-col md:flex-row items-center md:items-start gap-8'>
             <div className='w-full md:w-1/2'>
               <Image
-                src='/images/wwa.jpeg' // Replace with your image path
+                src='/images/wwa.png' // Replace with your image path
                 alt='Join Us on This Journey of Faith'
                 width={600}
                 height={400}
