@@ -15,6 +15,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn, openSans } from '@/lib/utils';
+import { SetStateAction, useState } from 'react';
 
 // Menu items.
 const items = [
@@ -40,11 +41,21 @@ const items = [
   },
 ];
 
-export function AppSidebar() {
+export function AppSidebar({
+  isOpen,
+  setIsOpen,
+}: {
+  isOpen: boolean;
+  setIsOpen: (value: SetStateAction<boolean>) => void;
+}) {
   const pathname = usePathname();
 
+  const closeSidebar = () => {
+    setIsOpen(false); // Function to close the sidebar
+  };
+
   return (
-    <Sidebar>
+    <Sidebar open={isOpen} onOpenChange={setIsOpen}>
       <SidebarContent>
         <SidebarGroup>
           <Image
@@ -66,7 +77,7 @@ export function AppSidebar() {
                   )}
                 >
                   <SidebarMenuButton size='lg' asChild>
-                    <Link href={item.url}>
+                    <Link href={item.url} onClick={closeSidebar}>
                       <item.icon />
                       <span className='text-base'>{item.title}</span>
                     </Link>
