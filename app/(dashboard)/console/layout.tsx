@@ -11,13 +11,9 @@ export default function ConsoleLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   useAuth();
-
-  const closeSidebar = () => {
-    setIsOpen(false);
-  };
 
   return (
     <SidebarProvider>
