@@ -18,7 +18,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import { useDispatch } from 'react-redux'; // Adjust the import based on your project structure
 import { setUser } from '@/redux/store/slices/authSlice';
-import { useAppSelector } from '@/redux/store';
 
 export function ConsoleForm() {
   const [email, setEmail] = useState('');
