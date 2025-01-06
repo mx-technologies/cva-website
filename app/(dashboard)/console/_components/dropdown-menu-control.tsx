@@ -15,12 +15,22 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { openSans } from '@/lib/utils';
 import { useRouter } from 'next/navigation';
+import { useDispatch } from 'react-redux';
+import { clearUser } from '@/redux/store/slices/authSlice';
+import Cookies from 'cookies';
+import axios from 'axios';
 
 export function DropdownMenuControl() {
   const router = useRouter();
+  const dispatch = useDispatch();
 
   const moveTo = (route: string) => {
     return router.push(route);
+  };
+
+  const handleLogout = async () => {
+    // Clear user from Redux store
+    dispatch(clearUser());
   };
 
   return (
@@ -49,10 +59,7 @@ export function DropdownMenuControl() {
         </DropdownMenuGroup>
 
         <DropdownMenuSeparator />
-        <DropdownMenuItem
-          className='cursor-pointer'
-          onClick={() => moveTo('/console/logout')}
-        >
+        <DropdownMenuItem className='cursor-pointer' onClick={handleLogout}>
           <LogOut />
           <span>Log out</span>
           <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
