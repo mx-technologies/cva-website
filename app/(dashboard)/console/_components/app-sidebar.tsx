@@ -1,47 +1,48 @@
-import { Calendar, Home, Inbox, Search, Settings } from 'lucide-react';
+'use client';
+
+import { Inbox, LayoutDashboard, Settings, Users } from 'lucide-react';
 
 import {
   Sidebar,
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
 } from '@/components/ui/sidebar';
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { cn, openSans } from '@/lib/utils';
 
 // Menu items.
 const items = [
   {
-    title: 'Home',
-    url: '#',
-    icon: Home,
+    title: 'Dashboard',
+    url: '/console',
+    icon: LayoutDashboard,
   },
   {
-    title: 'Inbox',
-    url: '#',
+    title: 'Resources',
+    url: '/console/resources',
     icon: Inbox,
   },
   {
-    title: 'Calendar',
-    url: '#',
-    icon: Calendar,
-  },
-  {
-    title: 'Search',
-    url: '#',
-    icon: Search,
+    title: 'Subscribers',
+    url: '/console/subscribers',
+    icon: Users,
   },
   {
     title: 'Settings',
-    url: '#',
+    url: '/console/settings',
     icon: Settings,
   },
 ];
 
 export function AppSidebar() {
+  const pathname = usePathname();
+
   return (
     <Sidebar>
       <SidebarContent>
@@ -54,15 +55,21 @@ export function AppSidebar() {
             className='self-center'
           />
 
-          <SidebarGroupContent className='mt-3'>
+          <SidebarGroupContent className={`mt-3 ${openSans.className}`}>
             <SidebarMenu>
               {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                <SidebarMenuItem
+                  key={item.title}
+                  className={cn(
+                    'rounded-lg',
+                    pathname === item.url && 'border bg-slate-100'
+                  )}
+                >
+                  <SidebarMenuButton size='lg' asChild>
+                    <Link href={item.url}>
                       <item.icon />
-                      <span>{item.title}</span>
-                    </a>
+                      <span className='text-base'>{item.title}</span>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}

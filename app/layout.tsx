@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Playfair_Display } from 'next/font/google';
 import './globals.css';
+import { ToastContainer } from 'react-toastify';
+import ReduxProvider from '@/redux/store/redux-provider';
 
 const playfairDisplay = Playfair_Display({
   variable: '--font-playfair-display',
@@ -18,10 +20,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-      <body className={`${playfairDisplay.variable} antialiased`}>
-        {children}
-      </body>
-    </html>
+    <ReduxProvider>
+      <html lang='en'>
+        <body className={`${playfairDisplay.variable} antialiased`}>
+          {children}
+          <ToastContainer />
+        </body>
+      </html>
+    </ReduxProvider>
   );
 }

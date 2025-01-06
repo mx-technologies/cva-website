@@ -1,4 +1,5 @@
 import { IconBadge } from '@/components/icon-badge';
+import { openSans } from '@/lib/utils';
 import { LucideIcon } from 'lucide-react';
 
 interface InfoCardProps {
@@ -15,7 +16,9 @@ export const InfoCard = ({
   label,
 }: InfoCardProps) => {
   return (
-    <div className='border rounded-md flex items-center gap-x-2 p-3'>
+    <div
+      className={`border rounded-md flex items-center gap-x-2 p-3 ${openSans.className}`}
+    >
       <IconBadge variant={variant} icon={Icon} />
       <div>
         <p className='font-medium'>{label}</p>

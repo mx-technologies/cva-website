@@ -1,12 +1,17 @@
+'use client';
+
 import { SidebarProvider } from '@/components/ui/sidebar';
 import { AppSidebar } from './_components/app-sidebar';
 import TopNav from './_components/top-nav';
+import useAuth from '@/hooks/use-auth';
 
 export default function ConsoleLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  useAuth();
+
   return (
     <SidebarProvider>
       <AppSidebar />
