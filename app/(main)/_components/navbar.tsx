@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetTrigger, SheetContent } from '@/components/ui/sheet';
 import { openSans } from '@/lib/utils';
@@ -29,6 +30,12 @@ const navbarRoutes = [
 ];
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const onClick = () => {
+    setIsOpen(false);
+  };
+
   return (
     <header className='bg-[#F5F5F5] border-b'>
       <nav
@@ -43,6 +50,7 @@ xl:px-14'
         </div>
 
         {/* Desktop Navigation Links */}
+
         <ul
           className={`hidden md:flex space-x-8 text-sm font-semibold text-gray-800 ${openSans.className}`}
         >
@@ -51,6 +59,7 @@ xl:px-14'
               key={route.href}
               href={route.href}
               label={route.label}
+              onClick={onClick}
             />
           ))}
         </ul>
@@ -67,9 +76,9 @@ xl:px-14'
 
         {/* Mobile Menu */}
         <div className='md:hidden'>
-          <Sheet>
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger>
-              <Button variant='ghost'>
+              <Button variant='ghost' onClick={() => setIsOpen(!isOpen)}>
                 <svg
                   className='w-6 h-6'
                   fill='none'
@@ -95,6 +104,7 @@ xl:px-14'
                     key={route.href}
                     href={route.href}
                     label={route.label}
+                    onClick={onClick}
                   />
                 ))}
               </ul>

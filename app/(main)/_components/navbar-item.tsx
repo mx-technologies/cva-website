@@ -2,25 +2,23 @@
 
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
+import { SetStateAction } from 'react';
+import { Dispatch } from 'react';
 
 interface NavbarItemProps {
   label: string;
   href: string;
+  onClick: () => void;
 }
 
-export default function NavbarItem({ label, href }: NavbarItemProps) {
+export default function NavbarItem({ label, href, onClick }: NavbarItemProps) {
   const pathname = usePathname();
-  const router = useRouter();
 
   const isActive =
     (pathname === '/' && href === '/') ||
     pathname === href ||
     pathname?.startsWith(`${href}/`);
-
-  const onClick = () => {
-    router.refresh();
-  };
 
   return (
     <li>
