@@ -2,6 +2,7 @@
 
 import { openSans } from '@/lib/utils';
 import Image from 'next/image';
+import { NewsletterForm } from './newsletter-form';
 
 export default function Footer() {
   return (
@@ -80,17 +81,7 @@ export default function Footer() {
           {/* Newsletter and Social Media */}
           <div className='flex flex-col gap-3 justify-start'>
             {/* Newsletter Section */}
-            <div className='flex items-center w-full md:w-[50%] lg:w-auto gap-3'>
-              <input
-                type='email'
-                placeholder='Enter your email'
-                className=' flex-grow px-4 py-2 border border-[#666666] rounded-full text-sm focus:outline-none'
-              />
-              <button className='bg-primary-main rounded-full text-white px-6 py-2 text-sm hover:bg-primary-hover'>
-                Send
-              </button>
-            </div>
-            <p className='text-gray-500 text-sm'>Join the Newsletter</p>
+            <NewsletterForm />
           </div>
         </div>
 

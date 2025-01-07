@@ -34,10 +34,11 @@ export function ConsoleForm() {
         email,
         password,
       });
+      const { id, token } = response.data.user;
 
       toast.success(response.data.message);
       // Dispatch user information to Redux store
-      dispatch(setUser({ email })); // You can add more user info if needed
+      dispatch(setUser({ id, email, token })); // You can add more user info if needed
       // Redirect or perform additional actions
     } catch (error: any) {
       const errorMessage =
