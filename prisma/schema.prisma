@@ -20,3 +20,9 @@ model User {
   password  String
   createdAt DateTime @default(now())
 }
+
+model NewsletterSubscription {
+  id        String   @id @default(uuid()) // Unique identifier for the subscription
+  email     String   @unique               // Email address of the subscriber
+  createdAt DateTime @default(now())       // Timestamp for when the subscription was created
+}

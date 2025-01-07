@@ -3,6 +3,7 @@
 import Navbar from '@/app/(main)/_components/navbar';
 import Footer from './_components/footer';
 import { usePathname } from 'next/navigation';
+import { ToastProvider } from '@/components/providers/toaster-provider';
 
 export default function MainLayout({
   children,
@@ -15,6 +16,7 @@ export default function MainLayout({
 
   return (
     <div>
+      <ToastProvider />
       <Navbar />
       {children}
       {footerComponent}
