@@ -29,11 +29,14 @@ export function EditPasswordForm() {
     newPassword: '',
     newPasswordConfirmation: '',
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     try {
+      setIsLoading(true);
+
       const response = await axios.post(
         '/api/auth/update-password',
         securityInfo
@@ -52,6 +55,8 @@ export function EditPasswordForm() {
       const errorMessage =
         error.response?.data?.message || 'An error occurred. Please try again.';
       toast.error(errorMessage);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -116,8 +121,9 @@ export function EditPasswordForm() {
             <Button
               type='submit'
               className='bg-primary-main hover:bg-primary-hover text-white'
+              disabled={isLoading}
             >
-              Save password
+              {isLoading ? 'Processing...' : 'Save password'}
             </Button>
           </CardFooter>
         </Card>

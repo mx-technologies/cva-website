@@ -23,14 +23,15 @@ export function EditEmailForm() {
   const router = useRouter();
   const dispatch = useDispatch();
   const user = useSelector((state: AuthStateProps) => state.auth.user);
+  const axios = useAxios(user?.token);
 
   const [email, setEmail] = useState(user?.email);
-
-  const axios = useAxios(user?.token);
+  const [isLoading, setIsLoading] = useState(false);
 
   const onSubmit = async (e: any) => {
     e.preventDefault();
     try {
+      setIsLoading(true);
       const response = await axios.post(`/api/auth/update-email`, {
         email,
       });
@@ -44,6 +45,8 @@ export function EditEmailForm() {
     } catch (error) {
       console.log('[UPDATE_EMAIL]', error);
       toast.error('Something went wrong.');
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -71,8 +74,9 @@ export function EditEmailForm() {
             <Button
               type='submit'
               className='bg-primary-main hover:bg-primary-hover text-white'
+              disabled={isLoading}
             >
-              Save changes
+              {isLoading ? 'Processing...' : 'Save changes'}
             </Button>
           </CardFooter>
         </Card>
