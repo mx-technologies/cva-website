@@ -67,7 +67,7 @@ const CommandList: any = React.forwardRef<
 
 CommandList.displayName = CommandPrimitive.List.displayName;
 
-const CommandEmpty = React.forwardRef<
+const CommandEmpty: any = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Empty>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Empty>
 >((props, ref) => (
@@ -80,7 +80,7 @@ const CommandEmpty = React.forwardRef<
 
 CommandEmpty.displayName = CommandPrimitive.Empty.displayName;
 
-const CommandGroup = React.forwardRef<
+const CommandGroup: any = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Group>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Group>
 >(({ className, ...props }, ref) => (
@@ -96,7 +96,7 @@ const CommandGroup = React.forwardRef<
 
 CommandGroup.displayName = CommandPrimitive.Group.displayName;
 
-const CommandSeparator = React.forwardRef<
+const CommandSeparator: any = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Separator>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Separator>
 >(({ className, ...props }, ref) => (
@@ -108,7 +108,7 @@ const CommandSeparator = React.forwardRef<
 ));
 CommandSeparator.displayName = CommandPrimitive.Separator.displayName;
 
-const CommandItem = React.forwardRef<
+const CommandItem: any = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Item>
 >(({ className, ...props }, ref) => (
@@ -124,7 +124,7 @@ const CommandItem = React.forwardRef<
 
 CommandItem.displayName = CommandPrimitive.Item.displayName;
 
-const CommandShortcut = ({
+const CommandShortcut: any = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLSpanElement>) => {
