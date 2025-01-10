@@ -1,8 +1,8 @@
 declare module 'cmdk' {
   import { FC } from 'react';
 
-  export const Command: FC<any>;
-  export const CommandInput: FC<any>;
-  export const CommandList: FC<any>;
-  export const CommandEmpty: FC<any>;
+  export const Command: any;
+  export const CommandInput: any;
+  export const CommandList: any;
+  export const CommandEmpty: any;
 }
