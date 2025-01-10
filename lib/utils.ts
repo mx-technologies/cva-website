@@ -17,3 +17,15 @@ export const openSans = Open_Sans({
   variable: '--font-open-sans',
   subsets: ['latin'],
 });
+
+export const resources = [
+  'Sermons',
+  'Books',
+  'Devotionals',
+  'Music & Worship',
+  'Recorded Live Sessions',
+];
+
+export const stringifyUrl = (category: string) => {
+  return category.split(' ').join('-').toLowerCase();
+};

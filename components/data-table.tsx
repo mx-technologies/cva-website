@@ -33,14 +33,16 @@ export function DataTable<TData, TValue>({
   });
 
   return (
-    <div className={`rounded-md border ${openSans.className}`}>
+    <div
+      className={`rounded-md border ${openSans.className} w-full max-w-full`}
+    >
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>
               {headerGroup.headers.map((header) => {
                 return (
-                  <TableHead key={header.id}>
+                  <TableHead key={header.id} className='text-nowrap'>
                     {header.isPlaceholder
                       ? null
                       : flexRender(
