@@ -119,7 +119,7 @@ export default function OurProgramsSection() {
           </div>
 
           {/* Thumbnails */}
-          <div className='flex flex-col md:w-[600px]'>
+          <div className='flex flex-col md:w-[600px] lg:w-full'>
             <div className='md:flex hidden items-center h-full md:overflow-x-scroll space-x-2'>
               {carouselItems.map((item, index) => (
                 <div
