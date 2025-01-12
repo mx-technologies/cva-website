@@ -71,7 +71,7 @@ export default function ResourceSectionItem({
         <a
           href={item.mediaUrl}
           download
-          className='px-4 py-2 text-primary-main border border-primary-main rounded-full'
+          className='flex justify-center px-4 py-2 text-primary-main border border-primary-main rounded-full'
         >
           Download
         </a>
