@@ -4,7 +4,7 @@ import { cn, openSans, resources, stringifyUrl } from '@/lib/utils';
 import { Resource, User } from '@prisma/client';
 import axios from 'axios';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import ResourceSectionItem from './resource-section-item';
 import { useDebounce } from '@/hooks/use-debounce';
@@ -13,6 +13,7 @@ import qs from 'query-string';
 const ResourcesSection = () => {
   const router = useRouter();
   const pathname = usePathname();
+  const resourcesRef = useRef(null); // Create a ref for the resources section
 
   const [resourceDetails, setResourceDetails] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -28,6 +29,12 @@ const ResourcesSection = () => {
         )}&search=${search}`
       );
       setResourceDetails(response.data);
+      if (resourcesRef.current) {
+        resourcesRef.current.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        }); // Scroll to resources section
+      }
     } catch (error) {
       console.error('Error fetching resources:', error);
     }
@@ -44,6 +51,7 @@ const ResourcesSection = () => {
 
   const onFilter = () => {
     setQ(searchTerm);
+    scrollToMain();
   };
 
   const changeResourceContainer = (tab: string) => {
@@ -68,13 +76,14 @@ const ResourcesSection = () => {
     );
 
     router.push(url);
-    if (debouncedValue) {
-      scrollToMain();
-    }
-  }, [debouncedValue, q, router, pathname, scrollToMain()]);
+  }, [debouncedValue, q, router, pathname]);
 
   return (
-    <section className={`bg-gray-100 ${openSans.className}`} id='main'>
+    <section
+      className={`bg-gray-100 ${openSans.className}`}
+      id='main'
+      ref={resourcesRef}
+    >
       <div className='container px-8 py-20 md:px-0 m-auto'>
         {/* Tabs */}
         <div className='flex md:justify-center mb-8 space-x-4 overflow-x-scroll'>
