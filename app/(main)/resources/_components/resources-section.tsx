@@ -29,12 +29,7 @@ const ResourcesSection = () => {
         )}&search=${search}`
       );
       setResourceDetails(response.data);
-      if (resourcesRef.current) {
-        resourcesRef.current.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        }); // Scroll to resources section
-      }
+      scrollToMain();
     } catch (error) {
       console.error('Error fetching resources:', error);
     }
