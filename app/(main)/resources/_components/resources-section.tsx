@@ -34,9 +34,11 @@ const ResourcesSection = () => {
   };
 
   const scrollToMain = () => {
-    const mainElement = document.getElementById('main');
-    if (mainElement) {
-      mainElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (typeof document !== 'undefined') {
+      const mainElement = document.getElementById('main');
+      if (mainElement) {
+        mainElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   };
 
