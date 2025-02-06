@@ -22,6 +22,9 @@ export default function RootLayout({
   return (
     <ReduxProvider>
       <html lang='en'>
+        <head>
+          <link rel='icon' href='/logo.png' sizes='any' />
+        </head>
         <body className={`${playfairDisplay.variable} antialiased`}>
           {children}
           <ToastContainer />
