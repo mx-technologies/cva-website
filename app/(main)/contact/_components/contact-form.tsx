@@ -32,10 +32,10 @@ const ContactForm = () => {
             <Image src='/email.svg' alt='Email' width={14} height={12} />
           </span>
           <a
-            href='mailto:christsvictoriousarmy@gmail.com'
+            href='mailto:ayomide@christsvictoriousarmy.org'
             className='text-primary-main underline underline-offset-8'
           >
-            christsvictoriousarmy@gmail.com
+            ayomide@christsvictoriousarmy.org
           </a>
         </div>
       </div>
