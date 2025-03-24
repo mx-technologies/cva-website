@@ -67,6 +67,9 @@ xl:px-14'
         {/* Join Us Button */}
         <div className='hidden md:block'>
           <Button
+            onClick={() =>
+              (window.location.href = 'https://forms.gle/UBUVfDVn1oL6FL3DA')
+            }
             variant='default'
             className={`bg-primary-main text-white hover:bg-red-800 rounded-full ${openSans.className}`}
           >
@@ -110,6 +113,9 @@ xl:px-14'
               </ul>
               <Button
                 variant='default'
+                onClick={() =>
+                  (window.location.href = 'https://forms.gle/UBUVfDVn1oL6FL3DA')
+                }
                 className={`bg-primary-main text-white hover:bg-red-800 w-full rounded-full ${openSans.className}`}
               >
                 Join Us
