@@ -21,9 +21,10 @@ export const openSans = Open_Sans({
 export const resources = [
   'Sermons',
   'Books',
-  'Devotionals',
+  'Recorded Bible Study Sessions',
   'Music & Worship',
-  'Recorded Live Sessions',
+  'Worship the King Sermon',
+  // 'Recorded Live Sessions',
 ];
 
 export const stringifyUrl = (category: string) => {

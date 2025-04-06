@@ -3,6 +3,7 @@
 import { openSans } from '@/lib/utils';
 import Image from 'next/image';
 import { NewsletterForm } from './newsletter-form';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -11,68 +12,46 @@ export default function Footer() {
         {/* Footer Sections */}
         <div className='flex flex-col lg:flex-row gap-10 lg:gap-0'>
           <div className='flex-[3] grid grid-cols-1 md:grid-cols-3 gap-8 text-left'>
+            {/* Logo */}
+            <div>
+              <Image
+                src={'/logo.png'}
+                width={60}
+                height={60}
+                alt='logo'
+                objectFit='cover'
+              />
+            </div>
             {/* Organization Section */}
             <div>
               <h5 className='font-bold text-lg'>Organization</h5>
               <ul className={`mt-4 space-y-2 text-[#666666]`}>
                 <li>
-                  <a href='#' className='hover:text-primary-hover'>
+                  <Link href='/contact' className='hover:text-primary-hover'>
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href='#' className='hover:text-primary-hover'>
+                  <Link href='/giving' className='hover:text-primary-hover'>
                     Donations
-                  </a>
-                </li>
-                <li>
-                  <a href='#' className='hover:text-primary-hover'>
-                    Blog & News
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
 
             {/* Resources Section */}
             <div>
-              <h5 className='font-bold text-lg'>Resources</h5>
+              <h5 className='font-bold text-lg'>Others</h5>
               <ul className='mt-4 space-y-2 text-[#666666]'>
                 <li>
-                  <a href='#' className='hover:text-primary-hover'>
-                    Documentation
-                  </a>
+                  <Link href='/about-us' className='hover:text-primary-hover'>
+                    About
+                  </Link>
                 </li>
                 <li>
-                  <a href='#' className='hover:text-primary-hover'>
-                    Papers
-                  </a>
-                </li>
-                <li>
-                  <a href='#' className='hover:text-primary-hover'>
-                    Guidelines
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Legal Section */}
-            <div>
-              <h5 className='font-bold text-lg'>Legal</h5>
-              <ul className='mt-4 space-y-2 text-[#666666]'>
-                <li>
-                  <a href='#' className='hover:text-primary-hover'>
-                    Terms of Service
-                  </a>
-                </li>
-                <li>
-                  <a href='#' className='hover:text-primary-hover'>
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a href='#' className='hover:text-primary-hover'>
-                    Cookies Policy
-                  </a>
+                  <Link href='/resources' className='hover:text-primary-hover'>
+                    Sermons
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -95,7 +74,8 @@ export default function Footer() {
               height='1'
               objectFit='cover'
             />
-            &nbsp; Christ&apos;s Victorious Army, 2024. All rights reserved
+            &nbsp; Christ&apos;s Victorious Army, {new Date().getFullYear()}.
+            All rights reserved
           </span>
           {/* Social Media Links */}
           <div className='flex justify-center lg:justify-end space-x-4'>

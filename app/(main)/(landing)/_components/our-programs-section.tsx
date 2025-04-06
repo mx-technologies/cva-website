@@ -7,25 +7,32 @@ import { useState, useEffect } from 'react';
 const carouselItems = [
   {
     image: '/images/p1.png',
-    title: 'Sunday Worship Service',
+    title: 'Unilag weekly meeting',
     description:
-      'Experience Spirit-filled worship, a powerful message, and vibrant praise. Come and be blessed as we gather to celebrate God’s presence.',
-    time: '8:00AM - 12:00PM',
+      'Join us every week for the Unilag Weekly Meeting—a time of fellowship, worship, and impactful teaching on campus.',
+    time: '',
   },
 
   {
     image: '/images/p2.png',
-    title: 'Bible Study',
+    title: 'Bible Study (Friday)',
     description:
       'Deepen your understanding of God’s word in a welcoming and interactive environment.',
-    time: '6:00PM - 8:00PM',
+    time: '',
   },
   {
     image: '/images/p3.png',
-    title: 'Prayer Meeting',
+    title: 'Worship the King Meeting',
     description:
-      'Join us for a powerful time of prayer and intercession for individuals, families, and nations.',
-    time: '7:00PM - 9:00PM',
+      'Experience divine encounter at our Worship the King Meeting—a sacred time of heartfelt worship and communion with God.',
+    time: '',
+  },
+  {
+    image: '/images/p3.png',
+    title: 'Monthly Vigils',
+    description:
+      'Join us for our powerful Monthly Vigils—a night of prayer, worship, and spiritual renewal.s',
+    time: '',
   },
 ];
 

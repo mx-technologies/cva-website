@@ -100,7 +100,7 @@ export default function WhoWeAreSection() {
       <div className='mt-8 flex justify-center'>
         {/* Learn More Link */}
         <Link
-          href='/learn-more'
+          href='/about-us'
           className={`text-primary-main text-xl border-b-2 border-primary-main flex text-center mt-4 gap-2 ${openSans.className}`}
         >
           Learn More
