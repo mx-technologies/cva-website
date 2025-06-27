@@ -4,6 +4,9 @@ import { DataTable } from '@/components/data-table';
 import { CreateResourceDrawer } from './_components/create-resource-drawer';
 import { db } from '@/lib/db';
 
+// Force dynamic rendering to prevent build-time database calls
+export const dynamic = 'force-dynamic';
+
 export default async function Resources() {
   const resources: any = await db.resource.findMany({
     orderBy: {

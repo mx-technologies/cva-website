@@ -3,6 +3,9 @@ import { DataTable } from '@/components/data-table';
 import { db } from '@/lib/db';
 import { playfairDisplay } from '@/lib/utils';
 
+// Force dynamic rendering to prevent build-time database calls
+export const dynamic = 'force-dynamic';
+
 export default async function Subscribers() {
   const subscribers = await db.newsletterSubscription.findMany({
     orderBy: {
