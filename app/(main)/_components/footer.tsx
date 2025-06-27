@@ -88,7 +88,10 @@ export default function Footer() {
                 layout='cover'
               />
             </a>
-            <a href='#' className='text-gray-500 hover:text-red-600'>
+            <a
+              href='https://youtube.com/@christsvictoriousarmy?si=pCKx60IIUsE243fn'
+              className='text-gray-500 hover:text-red-600'
+            >
               <Image
                 src='/images/youtube.png'
                 alt='Youtube'
@@ -97,7 +100,10 @@ export default function Footer() {
                 layout='cover'
               />
             </a>
-            <a href='#' className='text-gray-500 hover:text-red-600'>
+            <a
+              href='https://www.instagram.com/christsvictoriousarmy?igsh=em50d2IyZmw0NWo5&utm_source=qr'
+              className='text-gray-500 hover:text-red-600'
+            >
               <Image
                 src='/images/instagram.png'
                 alt='Instagram'

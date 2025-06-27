@@ -2,9 +2,11 @@
 
 import { openSans, playfairDisplay } from '@/lib/utils';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
 
 export default function HeroSection() {
+  const router = useRouter();
   const words = ['Glory', 'Power', 'Kingdom']; // Words to cycle through
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
@@ -60,13 +62,10 @@ export default function HeroSection() {
         <h1
           className={`text-3xl md:text-6xl font-bold text-gray-900 ${playfairDisplay.className}`}
         >
-          <p className='mb-4 md:mb-8'>Transforming Lives</p>
-          <p className='mb-4 md:mb-8'>Through God&apos;s Word</p>
-          for{' '}
-          <span className='relative inline-block'>
-            <span className='pl-4 px-7'>
-              {words[currentWordIndex]} {/* Dynamic Word */}
-            </span>
+          <p className='mb-4 md:mb-8'>Raising a Victorious</p>
+          Nation for
+          <span className='relative inline-block ml-2'>
+            <span className='pl-4 px-7'>Christ</span>
             <Image
               src='/images/circle.png' // Replace with your circle image path
               alt='Circle'
@@ -80,15 +79,14 @@ export default function HeroSection() {
         <p
           className={`mt-8 md:mt-12 text-gray-800 md:text-gray-700 max-w-lg text-shadow ${openSans.className}`}
         >
-          till the knowledge of His glory fills the entire Earth!
+          Equipping hearts, transforming lives, and revealing His glory—until
+          His Kingdom comes and the earth is filled with Him.
         </p>
 
         <div>
           <button
             className={`mt-8 px-4 py-2 md:px-6 md:py-3 text-sm md:text-base bg-primary-main text-white font-semibold rounded-full hover:bg-red-700 transition ${openSans.className}`}
-            onClick={() =>
-              (window.location.href = 'https://forms.gle/UBUVfDVn1oL6FL3DA')
-            }
+            onClick={() => router.push('/contact')}
           >
             Join Now
           </button>

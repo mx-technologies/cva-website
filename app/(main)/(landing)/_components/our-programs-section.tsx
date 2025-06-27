@@ -7,33 +7,33 @@ import { useState, useEffect } from 'react';
 const carouselItems = [
   {
     image: '/images/p1.png',
-    title: 'Unilag weekly meeting',
+    title: 'Mahanaim Bootcamp (Lagos Weekly Gathering)',
     description:
-      'Join us every week for the Unilag Weekly Meeting—a time of fellowship, worship, and impactful teaching on campus.',
-    time: '',
+      'More than a Bible study—it’s a training ground. Here, believers are equipped through sound teaching, prophetic insight, and deep fellowship to live boldly for Christ. Come hungry. Leave transformed.',
+    time: 'Tuesdays | 6:00 PM – 8:00 PM | UNILAG Conference Room',
   },
 
   {
     image: '/images/p2.png',
-    title: 'Bible Study (Friday)',
+    title: 'Monthly Vigil (Incense and Intercession Night)',
     description:
-      'Deepen your understanding of God’s word in a welcoming and interactive environment.',
-    time: '',
+      'A night of worship and priestly intercession where we minister to the Lord and pray His will over with the assurance that He meets ours.',
+    time: 'Every 3rd Friday | 11:00 PM | CVN Lagos',
   },
   {
     image: '/images/p3.png',
-    title: 'Worship the King Meeting',
+    title: 'Friday Bible Study',
     description:
-      'Experience divine encounter at our Worship the King Meeting—a sacred time of heartfelt worship and communion with God.',
-    time: '',
+      'A night of encounters, revelations, and practical wisdom for victorious living.',
+    time: 'Fridays | 9:30 PM - 11:00 PM',
   },
-  {
-    image: '/images/p3.png',
-    title: 'Monthly Vigils',
-    description:
-      'Join us for our powerful Monthly Vigils—a night of prayer, worship, and spiritual renewal.s',
-    time: '',
-  },
+  // {
+  //   image: '/images/p3.png',
+  //   title: 'Monthly Vigils',
+  //   description:
+  //     'Join us for our powerful Monthly Vigils—a night of prayer, worship, and spiritual renewal.s',
+  //   time: '',
+  // },
 ];
 
 export default function OurProgramsSection() {

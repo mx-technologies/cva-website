@@ -88,7 +88,7 @@ THANK YOU, JESUS.
             1024: { slidesPerView: 3 }, // Desktop
           }}
           pagination={{ clickable: true }}
-          autoplay={{ delay: 5000 }}
+          autoplay={{ delay: 7000 }}
           className='my-4 lg:my-12'
           style={{
             paddingBottom: '40px',

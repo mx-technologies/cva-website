@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetTrigger, SheetContent } from '@/components/ui/sheet';
 import { openSans } from '@/lib/utils';
 import NavbarItem from './navbar-item';
+import { useRouter } from 'next/navigation';
 
 const navbarRoutes = [
   {
@@ -30,6 +31,7 @@ const navbarRoutes = [
 ];
 
 export default function Navbar() {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
   const onClick = () => {
@@ -67,9 +69,7 @@ xl:px-14'
         {/* Join Us Button */}
         <div className='hidden md:block'>
           <Button
-            onClick={() =>
-              (window.location.href = 'https://forms.gle/UBUVfDVn1oL6FL3DA')
-            }
+            onClick={() => router.push('/contact')}
             variant='default'
             className={`bg-primary-main text-white hover:bg-red-800 rounded-full ${openSans.className}`}
           >
@@ -113,9 +113,7 @@ xl:px-14'
               </ul>
               <Button
                 variant='default'
-                onClick={() =>
-                  (window.location.href = 'https://forms.gle/UBUVfDVn1oL6FL3DA')
-                }
+                onClick={() => router.push('/contact')}
                 className={`bg-primary-main text-white hover:bg-red-800 w-full rounded-full ${openSans.className}`}
               >
                 Join Us
