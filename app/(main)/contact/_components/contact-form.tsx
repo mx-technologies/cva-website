@@ -21,10 +21,10 @@ const ContactForm = () => {
             <Image src='/phone.svg' alt='Email' width={14} height={12} />
           </span>
           <a
-            href='tel:2348166396694'
+            href='tel:2348141198403'
             className='text-primary-main underline underline-offset-8'
           >
-            +2348166396694
+            +2348141198403
           </a>
         </div>
         <div className='flex items-center space-x-2'>
@@ -106,7 +106,19 @@ const ContactForm = () => {
           </div>
         </div>
         {/* Social Media Links */}
-        <div className='flex justify-center space-x-6 mt-5'>
+        <div className='flex justify-center space-x-6 mt-10 lg:mt-5'>
+          <a
+            href='https://chat.whatsapp.com/GBzGuhBuugO5xlZzGFLjtW'
+            className='text-gray-500'
+          >
+            <Image
+              src='/images/whatsapp.png'
+              alt='Whatsapp'
+              width='34'
+              height='34'
+              layout='cover'
+            />
+          </a>
           <a href='#' className='text-gray-500'>
             <Image
               src='/images/facebook.png'

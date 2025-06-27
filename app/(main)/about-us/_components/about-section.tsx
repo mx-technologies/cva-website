@@ -71,7 +71,7 @@ export default function AboutSection() {
               </div>
 
               <Image
-                src='/about-us/me.png' // Replace with your image URL
+                src='/about-us/me.jpeg' // Replace with your image URL
                 alt='Brother Ayomide Idogun'
                 width={400}
                 height={400}
