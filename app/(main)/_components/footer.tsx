@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className='container mx-auto bg-white text-gray-[#0F0000] px-8 md:px-16 lg:px-16 py-12'>
+    <footer className='container mx-auto bg-white text-gray-[#0F0000] px-8 md:px-16 lg:px-16 '>
       <div className={`py-12 ${openSans.className}`}>
         {/* Footer Sections */}
         <div className='flex flex-col lg:flex-row gap-10 lg:gap-0'>
