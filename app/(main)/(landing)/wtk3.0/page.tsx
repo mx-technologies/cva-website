@@ -68,6 +68,12 @@ const Wtk3_0 = () => {
     }
   };
 
+  // Inside your component
+  const handleScroll = () => {
+    const section = document.getElementById('register');
+    section?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className='min-h-screen bg-gray-50'>
       {/* Hero Section */}
@@ -129,6 +135,7 @@ const Wtk3_0 = () => {
 
           {/* CTA Button */}
           <motion.a
+            onClick={handleScroll}
             href='#register'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -142,7 +149,7 @@ const Wtk3_0 = () => {
 
       {/* Registration Form */}
       <section
-        // id='register'
+        id='register'
         className='mt-20 mb-20 max-w-3xl mx-auto rounded-2xl bg-white px-6 py-16 shadow-md'
       >
         <h2
