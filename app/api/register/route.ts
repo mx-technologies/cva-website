@@ -5,36 +5,39 @@ export async function POST(req: Request) {
   const body = await req.json();
   const { fullName, email, phone, church, referral, prayer } = body;
 
-  console.log(process.env.NEXT_BREVO_API_KEY);
-  console.log(process.env.NEXT_BREVO_LIST_ID);
+  console.log('BREVO KEY:', process.env.NEXT_BREVO_API_KEY);
+  console.log('BREVO LIST:', process.env.NEXT_BREVO_LIST_ID);
 
   const res = await fetch('https://api.brevo.com/v3/contacts', {
     method: 'POST',
     headers: {
-      accept: 'application/json',
-      'content-type': 'application/json',
       'api-key': process.env.NEXT_BREVO_API_KEY!,
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
     },
     body: JSON.stringify({
-      emailBlacklisted: false,
       email,
+      emailBlacklisted: false,
       attributes: {
         FIRSTNAME: fullName,
-        LANDLINE_NUMBER: phone,
+        PHONE: phone,
         CHURCH: church || '',
         REFERRAL: referral || '',
         PRAYER: prayer || '',
       },
-      listIds: [parseInt(process.env.NEXT_BREVO_LIST_ID!)],
+      listIds: [parseInt(process.env.NEXT_BREVO_LIST_ID!, 10)],
       updateEnabled: true,
-      smtpBlacklistSender: [],
     }),
   });
 
   if (!res.ok) {
-    console.log(res);
+    const error = await res.json().catch(() => ({}));
+    console.error('Brevo error:', error);
 
-    return NextResponse.json({ error: 'Failed to register' }, { status: 500 });
+    return NextResponse.json(
+      { error: error.message || 'Failed to register' },
+      { status: 500 }
+    );
   }
 
   return NextResponse.json({ success: true });
