@@ -126,34 +126,31 @@ export default function OurProgramsSection() {
             </div>
           </div>
 
-          {/* Thumbnails w-[200] h-[200] md:w-[600px] */}
+          {/* Thumbnails */}
           <div className='lg:flex hidden flex-col lg:w-full'>
-            <div className='lg:flex hidden items-center h-full md:overflow-x-scroll space-x-2'>
+            <div className='flex items-center h-full overflow-x-auto space-x-3 py-2'>
               {carouselItems.map((item, index) => (
                 <div
                   key={index}
-                  className={`relative overflow-hidden rounded-lg border ${
+                  className={`relative flex-shrink-0 w-40 h-40 rounded-lg border cursor-pointer overflow-hidden ${
                     currentIndex === index
-                      ? 'border-primary-main'
-                      : 'border-gray-300'
-                  } cursor-pointer `}
+                      ? 'border-2 border-primary-main'
+                      : 'border border-gray-300'
+                  }`}
                   onClick={() => handleThumbnailClick(index)}
                 >
                   <Image
                     src={item.image}
                     alt={item.title}
-                    // layout='fill'
-                    width='600'
-                    height='600'
-                    // objectFit='cover'
-                    className='rounded-lg w-full'
+                    fill
+                    className='object-cover rounded-lg'
                   />
                 </div>
               ))}
             </div>
 
             {/* Navigation Buttons */}
-            <div className='flex space-x-4'>
+            <div className='flex space-x-4 mt-4'>
               <button
                 onClick={handlePrev}
                 aria-label='Previous'

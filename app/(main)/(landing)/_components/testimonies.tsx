@@ -52,6 +52,18 @@ To Jesus Christ, my Deliverer, I give all the glory.
 THANK YOU, JESUS.
 `,
     },
+    {
+      name: 'Ore Awolesi',
+      title: 'A Community Rooted in Sound Doctrine',
+      image: '/images/t3.png', // Replace with actual image path
+      text: `Christ’s Victorious Army is a community I have drawn strength from overtime. When you think of a place where you can get the standard for living, I don’t mean popular opinion o, the word and counsel of God on an area of life, then CVA is your go to. And you know what? Sound doctrine comes by just attending meetings and paying attention. I am grateful for this family. I have learned overtime that I need to keep showing up in God’s presence and I can draw strength from this community. Even if I miss one day, I mustn’t beat myself up. I just go back to God because he is waiting for me.`,
+    },
+    {
+      name: 'Esther Oyeleye',
+      title: 'Strength in God’s Presence: My CVA Journey',
+      image: '/images/t3.png', // Replace with actual image path
+      text: `CVA has been a forging ground for me, opening my eyes to what it truly means to belong to Christ. I’ve come to realise that Christianity is about living for God, embracing both challenges and blessings. Through CVA, I’ve learned the depth of responsibility that comes with bearing the mark of Christ, and it has been a beautiful journey of living out the gospel in every aspect of my life.`,
+    },
     // {
     //   name: 'Oluwaseun',
     //   title: 'CVA: A Transformative Journey',
@@ -98,11 +110,6 @@ THANK YOU, JESUS.
             <SwiperSlide key={index}>
               <div className='bg-white rounded-lg shadow-md p-6 flex flex-col text-left'>
                 <div className='flex gap-3 mb-4'>
-                  <img
-                    src={testimony.image}
-                    alt={testimony.name}
-                    className='w-16 h-16 rounded-full object-cover'
-                  />
                   <div
                     className={`flex flex-col justify-center ${openSans.className}`}
                   >

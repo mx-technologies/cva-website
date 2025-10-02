@@ -1,24 +1,57 @@
 'use client';
 import { useState } from 'react';
 import { toast } from 'react-hot-toast'; // Assuming you have react-hot-toast installed
-import axios from 'axios';
 
 export function NewsletterForm() {
+  const [formData, setFormData] = useState({
+    email: '',
+  });
   const [email, setEmail] = useState('');
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const validate = () => {
+    const newErrors: { [key: string]: string } = {};
+    if (!formData.email || !/\S+@\S+\.\S+/.test(formData.email))
+      newErrors.email = 'Valid email is required';
+
+    return newErrors;
+  };
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
 
+    setLoading(true);
+    setErrors({});
     try {
-      const response = await axios.post('/api/newsletter/subscribe', { email });
-      toast.success(response.data.message); // Show success message
-      setEmail(''); // Clear the input field
-    } catch (error: any) {
-      console.log('[SUBSCRIBE_NEWSLETTER]', error);
+      const res = await fetch('/api/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
 
-      const errorMessage =
-        error.response?.data?.message || 'An error occurred. Please try again.';
-      toast.error(errorMessage); // Show error message
+      if (res.ok) {
+        setSuccess(true);
+        setFormData({
+          email: '',
+        });
+        toast.success('Newsletter subscription was successful!');
+      } else {
+        const { error } = await res.json();
+        setErrors({ general: error || 'Failed to submit' });
+      }
+    } catch {
+      console.log(12344);
+
+      setErrors({ general: 'Network error, please try again' });
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -28,8 +61,10 @@ export function NewsletterForm() {
         <div className='flex items-center w-full md:w-[50%] lg:w-auto gap-3'>
           <input
             type='email'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={formData.email}
+            onChange={(e) =>
+              setFormData({ ...formData, email: e.target.value })
+            }
             placeholder='Enter your email'
             className=' flex-grow px-4 py-2 border border-[#666666] rounded-full text-sm focus:outline-none'
             required

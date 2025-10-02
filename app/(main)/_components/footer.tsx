@@ -53,6 +53,11 @@ export default function Footer() {
                     Sermons
                   </Link>
                 </li>
+                <li>
+                  <Link href='/wtk3.0' className='hover:text-primary-hover'>
+                    WTK 3.0
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
