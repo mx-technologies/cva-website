@@ -96,7 +96,7 @@ export default function OurProgramsSection() {
         {/* Right Section */}
         <div className='flex space-y-4 flex-col md:flex-row gap-10'>
           {/* Main Carousel View */}
-          <div className='flex flex-row lg:flex-col border border-primary-main rounded-3xl p-4 w-full sm:w-full lg:w-[400px] m-auto gap-5 lg:gap-0'>
+          <div className='flex flex-col md:flex-row lg:flex-col border border-primary-main rounded-3xl p-4 w-full sm:w-full lg:w-[400px] m-auto gap-5 lg:gap-0'>
             <div className='relative rounded-lg mb-4'>
               <Image
                 src={carouselItems[currentIndex].image}
@@ -104,7 +104,7 @@ export default function OurProgramsSection() {
                 width={300}
                 height={200}
                 objectFit='cover'
-                className='rounded-lg'
+                className='w-full md:w-300 md:h-200 rounded-lg'
               />
             </div>
             <div>
