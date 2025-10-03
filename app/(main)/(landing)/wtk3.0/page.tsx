@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { openSans, playfairDisplay } from '@/lib/utils';
 import toast from 'react-hot-toast';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Wtk3_0 = () => {
   const [formData, setFormData] = useState({
@@ -150,7 +151,7 @@ const Wtk3_0 = () => {
       {/* Registration Form */}
       <section
         id='register'
-        className='mt-20 mb-20 max-w-3xl mx-auto rounded-2xl bg-white px-6 py-16 shadow-md'
+        className='mt-20 mb-10 max-w-3xl mx-auto rounded-2xl bg-white px-6 py-16 shadow-md'
       >
         <h2
           className={`mb-8 text-center text-3xl font-bold text-[#8B0000] ${playfairDisplay.className}`}
@@ -284,6 +285,26 @@ const Wtk3_0 = () => {
           </button>
         </form>
       </section>
+      {/* <br /> */}
+
+      {/* WhatsApp Channel Invite */}
+      <div className='flex flex-col justify-center items-center'>
+        <p
+          className={`mb-4 text-lg font-medium text-gray-700 ${openSans.className}`}
+        >
+          Stay updated and connected with others joining the event!
+        </p>
+        <a
+          href='https://chat.whatsapp.com/DT3QMJDy2JKKkCHGaFQsnW?mode=ems_share_t'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='flex rounded-xl bg-[#8B0000] px-6 py-3 font-semibold text-white shadow-lg  hover:bg-red-900 transition gap-2 items-center'
+        >
+          <FaWhatsapp className='w-5 h-5 text-green-400' />
+          Join the WTK 3.0 WhatsApp Channel
+        </a>
+      </div>
+
       <br />
     </div>
   );
