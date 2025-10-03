@@ -6,6 +6,7 @@ import { Sheet, SheetTrigger, SheetContent } from '@/components/ui/sheet';
 import { openSans } from '@/lib/utils';
 import NavbarItem from './navbar-item';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const navbarRoutes = [
   {
@@ -47,7 +48,9 @@ xl:px-14'
         {/* Logo */}
         <div className='flex items-center'>
           <div className='w-10 h-10'>
-            <img src='/logo.png' alt='Logo' className='object-contain' />
+            <Link href='/'>
+              <img src='/logo.png' alt='Logo' className='object-contain' />
+            </Link>
           </div>
         </div>
 

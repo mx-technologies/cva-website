@@ -72,13 +72,15 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className='flex flex-col lg:flex-row md:flex-lg justify-between mt-4 md:mt-12 lg:mt-24 border-t border-gray-200 pt-6 text-center text-sm text-gray-500 gap-4'>
           <span className='flex flex-col md:flex-row items-center gap-1 md:gap-0'>
-            <Image
-              src={'/logo.png'}
-              alt='logo'
-              width='25'
-              height='1'
-              objectFit='cover'
-            />
+            <Link href={'/'}>
+              <Image
+                src={'/logo.png'}
+                alt='logo'
+                width='25'
+                height='1'
+                objectFit='cover'
+              />
+            </Link>
             &nbsp; Christ&apos;s Victorious Army, {new Date().getFullYear()}.
             All rights reserved
           </span>
