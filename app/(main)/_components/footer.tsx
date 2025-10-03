@@ -14,13 +14,15 @@ export default function Footer() {
           <div className='flex-[3] grid grid-cols-1 md:grid-cols-3 gap-8 text-left'>
             {/* Logo */}
             <div>
-              <Image
-                src={'/logo.png'}
-                width={60}
-                height={60}
-                alt='logo'
-                objectFit='cover'
-              />
+              <Link href={'/'}>
+                <Image
+                  src={'/logo.png'}
+                  width={60}
+                  height={60}
+                  alt='logo'
+                  objectFit='cover'
+                />
+              </Link>
             </div>
             {/* Organization Section */}
             <div>
