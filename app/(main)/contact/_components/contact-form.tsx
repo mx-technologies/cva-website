@@ -1,7 +1,46 @@
+'use client';
+
 import { openSans, playfairDisplay } from '@/lib/utils';
 import Image from 'next/image';
+import { useState } from 'react';
+import toast from 'react-hot-toast';
 
 const ContactForm = () => {
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus(null);
+
+    const formData = new FormData(e.currentTarget);
+    const body = {
+      firstName: formData.get('firstName'),
+      lastName: formData.get('lastName'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      message: formData.get('message'),
+    };
+
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+
+    const data = await res.json();
+    setLoading(false);
+
+    if (res.ok) {
+      toast.success('Message sent successfully.');
+      setStatus('Message sent successfully ✅');
+      e.currentTarget.reset();
+    } else {
+      setStatus(`Failed ❌: ${data.error}`);
+    }
+  };
+
   return (
     <section className='w-full pt-12 px-8 md:px-36 bg-white rounded-lg'>
       {/* Header */}
@@ -41,14 +80,19 @@ const ContactForm = () => {
       </div>
 
       {/* Form */}
-      <form className={`mt-8 space-y-4 ${openSans.className}`}>
+      <form
+        onSubmit={handleSubmit}
+        className={`mt-8 space-y-4 ${openSans.className}`}
+      >
         <div className='grid grid-cols-1 gap-4 md:grid-cols-2'>
           <div>
             <label>First Name</label>
             <input
               type='text'
+              name='firstName'
               placeholder='First name'
               className='w-full px-4 py-2 mt-1 border border-[#999999] rounded-full focus:outline-primary-main'
+              required
             />
           </div>
 
@@ -56,8 +100,10 @@ const ContactForm = () => {
             <label>Last Name</label>
             <input
               type='text'
+              name='lastName'
               placeholder='Last name'
               className='w-full px-4 py-2 mt-1 border border-[#999999] rounded-full focus:outline-primary-main'
+              required
             />
           </div>
         </div>
@@ -68,14 +114,18 @@ const ContactForm = () => {
             type='email'
             placeholder='Email Address'
             className='w-full px-4 py-2 mt-1 border border-[#999999] rounded-full focus:outline-primary-main'
+            name='email'
+            required
           />
         </div>
         <div>
           <label>Phone Number</label>
           <input
             type='tel'
+            name='phone'
             placeholder='Phone Number'
             className='w-full px-4 py-2 mt-1 border border-[#999999] rounded-full focus:outline-primary-main'
+            required
           />
         </div>
 
@@ -83,15 +133,18 @@ const ContactForm = () => {
           <label>Message</label>
           <textarea
             rows={4}
+            name='message'
             placeholder='Leave us a message'
             className='w-full px-4 py-2 mt-1 border border-[#999999] rounded-3xl focus:outline-primary-main'
+            required
           ></textarea>
         </div>
         <button
           type='submit'
+          disabled={loading}
           className='w-full px-4 py-2 text-white bg-primary-main rounded-lg hover:bg-primary-hover'
         >
-          Send
+          {loading ? 'Sending...' : 'Send'}
         </button>
       </form>
 

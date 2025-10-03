@@ -288,7 +288,7 @@ const Wtk3_0 = () => {
       {/* <br /> */}
 
       {/* WhatsApp Channel Invite */}
-      <div className='flex flex-col justify-center items-center'>
+      <div className='flex flex-col justify-center items-center px-6'>
         <p
           className={`mb-4 text-lg font-medium text-gray-700 ${openSans.className}`}
         >
