@@ -9,12 +9,6 @@ import { Pagination, Autoplay } from 'swiper/modules';
 export default function Testimonies() {
   const testimonies = [
     {
-      name: 'Victor',
-      title: 'My Experience with CVA',
-      image: '/images/t1.png', // Replace with actual image path
-      text: `CVA has been more than just a spiritual hub for me – it's a place where I've been trained in the Word of God and empowered to fulfill His purposes. I've experienced firsthand the equipping of spiritual gifts and the transformative impact of God's Word, and I'm a living testimony of His faithfulness.`,
-    },
-    {
       name: 'Ibukun',
       title: 'My Lost Phone Was Miraculously Returned!',
       image: '/images/t2.png', // Replace with actual image path
@@ -64,6 +58,12 @@ THANK YOU, JESUS.
       image: '/images/t3.png', // Replace with actual image path
       text: `CVA has been a forging ground for me, opening my eyes to what it truly means to belong to Christ. I’ve come to realise that Christianity is about living for God, embracing both challenges and blessings. Through CVA, I’ve learned the depth of responsibility that comes with bearing the mark of Christ, and it has been a beautiful journey of living out the gospel in every aspect of my life.`,
     },
+    {
+      name: 'Victor',
+      title: 'My Experience with CVA',
+      image: '/images/t1.png', // Replace with actual image path
+      text: `CVA has been more than just a spiritual hub for me – it's a place where I've been trained in the Word of God and empowered to fulfill His purposes. I've experienced firsthand the equipping of spiritual gifts and the transformative impact of God's Word, and I'm a living testimony of His faithfulness.`,
+    },
     // {
     //   name: 'Oluwaseun',
     //   title: 'CVA: A Transformative Journey',
@@ -90,36 +90,30 @@ THANK YOU, JESUS.
           </p>
         </div>
 
-        {/* Carousel */}
         <Swiper
           modules={[Pagination, Autoplay]}
-          spaceBetween={30} // Space between slides
+          spaceBetween={30}
           breakpoints={{
-            // Define responsive breakpoints
-            640: { slidesPerView: 1 }, // Mobile
-            1024: { slidesPerView: 3 }, // Desktop
+            640: { slidesPerView: 1 },
+            1024: { slidesPerView: 3 },
           }}
           pagination={{ clickable: true }}
           autoplay={{ delay: 7000 }}
           className='my-4 lg:my-12'
-          style={{
-            paddingBottom: '40px',
-          }}
+          style={{ paddingBottom: '40px' }}
         >
           {testimonies.map((testimony, index) => (
-            <SwiperSlide key={index}>
-              <div className='bg-white rounded-lg shadow-md p-6 flex flex-col text-left'>
+            <SwiperSlide key={index} className='flex'>
+              <div
+                className={`bg-white rounded-lg shadow-md p-6 flex flex-col text-left w-full h-[65vh] min-h-[320px] ${openSans.className}`}
+              >
                 <div className='flex gap-3 mb-4'>
-                  <div
-                    className={`flex flex-col justify-center ${openSans.className}`}
-                  >
+                  <div className='flex flex-col justify-center'>
                     <h3 className='text-lg font-bold'>{testimony.name}</h3>
                     <p className='text-sm'>{testimony.title}</p>
                   </div>
                 </div>
-                <p
-                  className={`text-gray-600 text-sm leading-relaxed ${openSans.className}`}
-                >
+                <p className='text-gray-600 text-sm leading-relaxed flex-grow'>
                   {testimony.text}
                 </p>
               </div>
