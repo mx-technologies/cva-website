@@ -9,17 +9,17 @@ const approachDetails = {
   prayer: {
     title: 'Prayer and Intercession',
     description:
-      'Through fervent prayer and heartfelt intercession, we connect with God to seek guidance, healing, and breakthroughs in the lives of individuals and our community. Our prayer gatherings serve as a spiritual backbone, igniting faith and divine intervention.',
+      'Through fervent prayer and heartfelt intercession, we connect with God to seek guidance, healing, and breakthroughs in the lives of individuals and our community. Our prayer gatherings serve as a spiritual backbone, igniting faith and divine intervention. Every 3rd Friday | 11:00 PM | CVN Lagos.',
   },
   evangelism: {
     title: 'Evangelism and Outreaches',
     description:
-      'We are passionate about sharing the love and message of Christ beyond our walls. Through street evangelism, missions, and community outreaches, we touch lives, restore hope, and build lasting change through the Gospel.',
+      'We are passionate about sharing the love and message of Christ beyond our walls. Through street evangelism, missions, and community outreaches, we touch lives, restore hope, and build lasting change through the Gospel. These outreaches hold every third Saturday of the month at 7:30 a.m.',
   },
   teaching: {
     title: 'Teaching the Word',
     description:
-      'The foundation of faith is the Word of God. We emphasize sound biblical teaching to equip believers with truth, deepen their walk with Christ, and empower them to live out the Gospel daily.',
+      'The foundation of faith is the Word of God. We emphasize sound biblical teaching to equip believers with truth, deepen their walk with Christ, and empower them to live out the Gospel daily. Join us for our Word gatherings on YouTube: Tuesdays at 5:30 PM and Fridays from 9:30 PM to 11:00 PM.',
   },
 };
 

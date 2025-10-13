@@ -131,14 +131,14 @@ export default function OurStory() {
                   it&nbsp;s only the beginning of what God is doing.
                 </p>
               </div>
-              <button
+              <br />
+              <a
+                href='https://forms.gle/UBUVfDVn1oL6FL3DA'
+                target='blank'
                 className={`mt-6 px-12 py-3 bg-primary-main text-white rounded-full hover:bg-primary-hover transition ${openSans.className}`}
-                onClick={() =>
-                  (window.location.href = 'https://forms.gle/UBUVfDVn1oL6FL3DA')
-                }
               >
                 Join
-              </button>
+              </a>
             </div>
           </div>
         </div>

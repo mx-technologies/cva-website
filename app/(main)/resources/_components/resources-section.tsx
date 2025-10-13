@@ -1,6 +1,12 @@
 'use client';
 
-import { cn, openSans, resources, stringifyUrl } from '@/lib/utils';
+import {
+  cn,
+  openSans,
+  playfairDisplay,
+  resources,
+  stringifyUrl,
+} from '@/lib/utils';
 import { Resource, User } from '@prisma/client';
 import axios from 'axios';
 import Image from 'next/image';
@@ -10,6 +16,7 @@ import ResourceSectionItem from './resource-section-item';
 import { useDebounce } from '@/hooks/use-debounce';
 import qs from 'query-string';
 import { Inbox, BookOpen, FileText, Video, Music } from 'lucide-react';
+import ResourcesPreviewGrid from './resources-items';
 
 // Unique preloader component for resources
 const ResourcesPreloader: FC = () => {
@@ -187,7 +194,7 @@ const ResourcesSection = () => {
     >
       <div className='container px-8 py-20 md:px-0 m-auto'>
         {/* Tabs */}
-        <div className='flex md:justify-center mb-8 space-x-4 overflow-x-scroll'>
+        {/* <div className='flex md:justify-center mb-8 space-x-4 overflow-x-scroll'>
           {resources.map((tab, index) => (
             <button
               key={index}
@@ -202,10 +209,10 @@ const ResourcesSection = () => {
               {tab}
             </button>
           ))}
-        </div>
+        </div> */}
 
         {/* Search and Filter */}
-        <div className='flex flex-col md:flex-row items-center justify-center gap-2 mb-6'>
+        {/* <div className='flex flex-col md:flex-row items-center justify-center gap-2 mb-6'>
           <input
             type='text'
             placeholder='Search'
@@ -219,10 +226,10 @@ const ResourcesSection = () => {
             <Image src='/filter.svg' alt='filter' width={10} height={4} />
             Filter
           </button>
-        </div>
+        </div> */}
 
         {/* Cards */}
-        <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2'>
+        {/* <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2'>
           {isLoading ? (
             <div className='col-span-full'>
               <ResourcesPreloader />
@@ -244,7 +251,25 @@ const ResourcesSection = () => {
               />
             </div>
           )}
+        </div> */}
+
+        <div className='text-center max-w-3xl mx-auto'>
+          {/* Heading */}
+          <h2
+            className={`text-3xl md:text-5xl font-bold text-[#0F0000] mb-4 ${playfairDisplay.className}`}
+          >
+            Our Resources
+          </h2>
+          <p className={`text-gray-700 ${openSans.className}`}>
+            Explore a collection of spirit-filled teachings, messages, and
+            materials designed to strengthen your faith and deepen your
+            understanding of God’s Word. Every resource is crafted to equip you
+            for victorious living and to inspire a life fully aligned with God’s
+            purpose.
+          </p>
         </div>
+
+        <ResourcesPreviewGrid />
       </div>
     </section>
   );

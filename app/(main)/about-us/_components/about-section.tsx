@@ -34,22 +34,22 @@ export default function AboutSection() {
                 <h2
                   className={`text-4xl md:text-4xl font-bold mt-3 mb-6 ${playfairDisplay.className}`}
                 >
-                  About Brother Ayomide Idogun
+                  About Pastor Ayomide Idogun
                 </h2>
               </div>
               <div className={`${openSans.className}`}>
                 <p className='text-lg leading-relaxed mb-6'>
-                  Ayomide Idogun is the founder of CVA, a growing movement
-                  birthed out of obedience to God&apos;s call.
+                  Pastor Ayomide Idogun is the founder of CVA, a growing
+                  movement birthed out of obedience to God&apos;s call.
                 </p>
                 <p className='text-lg leading-relaxed'>
-                  Ayomide is passionate about seeing people become the best
-                  versions of themselves—living fully in the purpose God has for
-                  them. As a teacher of the Word, he is committed to empowering
-                  individuals to embrace the victorious life God has designed
-                  for them. His ministry is centered on guiding people into
-                  deeper fellowship with God, equipping them to live boldly in
-                  faith, and fulfilling their God-given destinies.
+                  Pastor Ayomide is passionate about seeing people become the
+                  best versions of themselves—living fully in the purpose God
+                  has for them. As a teacher of the Word, he is committed to
+                  empowering individuals to embrace the victorious life God has
+                  designed for them. His ministry is centered on guiding people
+                  into deeper fellowship with God, equipping them to live boldly
+                  in faith, and fulfilling their God-given destinies.
                 </p>
               </div>
             </div>
