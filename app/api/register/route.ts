@@ -33,7 +33,7 @@ export async function POST(req: Request) {
 
   if (!res.ok) {
     const error = await res.json().catch(() => ({}));
-    console.error('Brevo error:', error);
+    console.error('Brevo Error:', error);
 
     return NextResponse.json(
       { error: error.message || 'Failed to register' },
