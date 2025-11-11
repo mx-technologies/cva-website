@@ -13,6 +13,7 @@ const Wtk3_0 = () => {
     email: '',
     phone: '',
     church: '',
+    location: '',
     referral: '',
     prayer: '',
   });
@@ -56,6 +57,7 @@ const Wtk3_0 = () => {
           church: '',
           referral: '',
           prayer: '',
+          location: '',
         });
         toast.success('Registration successful!');
       } else {
@@ -257,6 +259,19 @@ const Wtk3_0 = () => {
               <option>Friend / Family</option>
               <option>Other</option>
             </select>
+          </div>
+
+          {/* location */}
+          <div>
+            <label className='mb-1 block font-medium'>Location</label>
+            <input
+              type='text'
+              value={formData.location}
+              onChange={(e) =>
+                setFormData({ ...formData, location: e.target.value })
+              }
+              className='w-full rounded-xl border p-3 focus:outline-none focus:ring-2 focus:ring-[#8B0000]'
+            />
           </div>
 
           {/* Prayer Requests */}

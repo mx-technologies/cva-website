@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 
 export async function POST(req: Request) {
   const body = await req.json();
-  const { fullName, email, phone, church, referral, prayer } = body;
+  const { fullName, email, phone, church, location, referral, prayer } = body;
 
   console.log('BREVO KEY:', process.env.NEXT_BREVO_API_KEY);
   console.log('BREVO LIST:', process.env.NEXT_BREVO_LIST_ID);
@@ -22,6 +22,7 @@ export async function POST(req: Request) {
         ...(fullName && { FIRSTNAME: fullName }),
         ...(phone && { PHONE: phone }),
         ...(church && { CHURCH: church || '' }),
+        ...(location && { LOCATION: location || '' }),
         ...(referral && { REFERRAL: referral || '' }),
         ...(prayer && { PRAYER: prayer || '' }),
       },
