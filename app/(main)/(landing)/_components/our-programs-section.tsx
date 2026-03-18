@@ -7,10 +7,10 @@ import { useState, useEffect } from 'react';
 const carouselItems = [
   {
     image: '/images/p1.png',
-    title: 'Mahanaim Bootcamp (Lagos Weekly Gathering)',
+    title: 'Sunday Services',
     description:
       'More than a Bible study—it’s a training ground. Here, believers are equipped through sound teaching, prophetic insight, and deep fellowship to live boldly for Christ. Come hungry. Leave transformed.',
-    time: 'Tuesdays | 6:00 PM – 8:00 PM | UNILAG Conference Room',
+    time: 'Sundays | 05:00 PM – 07:00 PM',
   },
 
   {
@@ -66,109 +66,117 @@ export default function OurProgramsSection() {
   };
 
   return (
-    <div className='bg-white py-12 md:py-20 px-4 md:px-16 lg:pl-32'>
-      <div className='p-2 lg:pl-20 ml-auto flex flex-col lg:grid lg:grid-cols-[1fr_2fr] gap-10 items-center'>
-        {/* Left Section */}
-        <div className='flex gap-3 flex-1 flex-col sm:flex-row md:flex-row'>
-          <div className='w-full lg:w-72'>
-            <h2
-              className={`flex lg:flex-col justify-center lg:text-left text-3xl md:text-5xl font-bold text-gray-900 mb-4 ${playfairDisplay.className} gap-2 w-full`}
-            >
-              <span>Our</span> <span>Programs</span>
-            </h2>
-            <div
-              className={`text-center lg:text-left w-full text-gray-700 leading-relaxed ${openSans.className}`}
+    <section className='bg-white py-16 md:py-24 px-6 lg:px-16'>
+      <div className='container mx-auto'>
+        <div className='grid grid-cols-1 lg:grid-cols-12 gap-12 items-start'>
+          {/* Left Section: Header and Description */}
+          <div className='lg:col-span-4 flex flex-col gap-6'>
+            <div className='flex items-center gap-6 lg:flex-col lg:items-start'>
+              <h2
+                className={`text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight ${playfairDisplay.className}`}
+              >
+                Our <br className='hidden lg:block' /> Programs
+              </h2>
+              <Image
+                src='/arrow-diagonal.svg'
+                alt='Decorative Arrow'
+                width={80}
+                height={80}
+                className='hidden lg:block rotate-0'
+              />
+            </div>
+            <p
+              className={`text-gray-700 text-lg leading-relaxed max-w-md ${openSans.className}`}
             >
               Experience God’s presence, connect with a loving community, and
               discover opportunities to deepen your faith and make an impact for
               His Kingdom.
-            </div>
+            </p>
           </div>
-          <Image
-            src={'/arrow-diagonal.svg'}
-            alt='arrow-diagonal'
-            width='150'
-            height='50'
-            className='self-center hidden lg:block'
-          />
-        </div>
 
-        {/* Right Section */}
-        <div className='flex space-y-4 flex-col md:flex-row gap-10'>
-          {/* Main Carousel View */}
-          <div className='flex flex-col md:flex-row lg:flex-col border border-primary-main rounded-3xl p-4 w-full sm:w-full lg:w-[400px] m-auto gap-5 lg:gap-0'>
-            <div className='relative rounded-lg mb-4'>
-              <Image
-                src={carouselItems[currentIndex].image}
-                alt={carouselItems[currentIndex].title}
-                width={300}
-                height={200}
-                objectFit='cover'
-                className='w-full md:w-300 md:h-200 rounded-lg'
-              />
-            </div>
-            <div>
-              <h3
-                className={`text-2xl font-bold text-gray-900 mb-2 ${playfairDisplay.className}`}
-              >
-                {carouselItems[currentIndex].title}
-              </h3>
-              <p
-                className={`text-secondary-main leading-relaxed mb-4 text-sm ${openSans.className}`}
-              >
-                {carouselItems[currentIndex].description}
-              </p>
-              <div
-                className={`bg-yellow-300 text-sm font-medium text-gray-900 lg:px-3 py-1 rounded-lg inline-block ${openSans.className}`}
-              >
-                {carouselItems[currentIndex].time}
+          {/* Right Section: Carousel and Thumbnails */}
+          <div className='lg:col-span-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8'>
+            {/* Main Featured Item */}
+            <div className='bg-white border-2 border-primary-main rounded-[2rem] overflow-hidden p-6 md:p-8 flex flex-col lg:flex-row gap-8 shadow-sm transition-all duration-500'>
+              <div className='relative w-full lg:w-1/2 min-h-[250px] rounded-2xl overflow-hidden'>
+                <Image
+                  src={carouselItems[currentIndex].image}
+                  alt={carouselItems[currentIndex].title}
+                  fill
+                  className='object-cover transition-transform duration-700 hover:scale-110'
+                />
+              </div>
+              <div className='flex flex-col justify-center flex-1'>
+                <h3
+                  className={`text-2xl md:text-3xl font-bold text-gray-900 mb-4 ${playfairDisplay.className}`}
+                >
+                  {carouselItems[currentIndex].title}
+                </h3>
+                <p
+                  className={`text-gray-600 leading-relaxed mb-6 text-base ${openSans.className}`}
+                >
+                  {carouselItems[currentIndex].description}
+                </p>
+                <div
+                  className={`bg-yellow-100 text-yellow-800 text-sm font-semibold px-4 py-2 rounded-full inline-flex items-center w-fit border border-yellow-200 ${openSans.className}`}
+                >
+                  <span className='mr-2'>⏰</span> {carouselItems[currentIndex].time}
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Thumbnails */}
-          <div className='lg:flex hidden flex-col lg:w-full'>
-            <div className='flex items-center h-full overflow-x-auto space-x-3 py-2'>
-              {carouselItems.map((item, index) => (
-                <div
-                  key={index}
-                  className={`relative flex-shrink-0 w-40 h-40 rounded-lg border cursor-pointer overflow-hidden ${
-                    currentIndex === index
-                      ? 'border-2 border-primary-main'
-                      : 'border border-gray-300'
-                  }`}
-                  onClick={() => handleThumbnailClick(index)}
+            {/* Selection Area (Thumbnails & Navigation) */}
+            <div className='flex flex-col gap-6 overflow-hidden'>
+              <div className='flex items-center gap-4 overflow-x-auto pb-4 no-scrollbar'>
+                {carouselItems.map((item, index) => (
+                  <button
+                    key={index}
+                    onClick={() => handleThumbnailClick(index)}
+                    className={`relative flex-shrink-0 w-32 h-32 md:w-36 md:h-36 rounded-2xl overflow-hidden border-4 transition-all duration-300 ${currentIndex === index
+                      ? 'border-primary-main scale-105 shadow-lg'
+                      : 'border-transparent opacity-60 hover:opacity-100 hover:scale-105'
+                      }`}
+                  >
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className='object-cover'
+                    />
+                  </button>
+                ))}
+              </div>
+
+              {/* Controls */}
+              <div className='flex items-center gap-4 justify-center md:justify-start'>
+                <button
+                  onClick={handlePrev}
+                  className='group w-12 h-12 flex items-center justify-center border-2 border-gray-200 rounded-full transition-all hover:bg-gray-900 hover:border-gray-900'
+                  aria-label='Previous'
                 >
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className='object-cover rounded-lg'
-                  />
+                  <span className='group-hover:text-white transition-colors text-xl font-bold'>←</span>
+                </button>
+                <button
+                  onClick={handleNext}
+                  className='group w-12 h-12 flex items-center justify-center bg-gray-900 border-2 border-gray-900 rounded-full transition-all hover:bg-white hover:border-gray-900'
+                  aria-label='Next'
+                >
+                  <span className='text-white group-hover:text-gray-900 transition-colors text-xl font-bold'>→</span>
+                </button>
+                <div className='flex gap-2 ml-4'>
+                  {carouselItems.map((_, index) => (
+                    <div
+                      key={index}
+                      className={`h-2 rounded-full transition-all duration-300 ${currentIndex === index ? 'w-8 bg-primary-main' : 'w-2 bg-gray-200'
+                        }`}
+                    />
+                  ))}
                 </div>
-              ))}
-            </div>
-
-            {/* Navigation Buttons */}
-            <div className='flex space-x-4 mt-4'>
-              <button
-                onClick={handlePrev}
-                aria-label='Previous'
-                className='w-8 h-8 flex items-center justify-center bg-gray-200 rounded-full hover:bg-gray-300'
-              >
-                &#60;
-              </button>
-              <button
-                onClick={handleNext}
-                aria-label='Next'
-                className='w-8 h-8 flex items-center justify-center bg-gray-900 text-white rounded-full hover:bg-gray-800'
-              >
-                &#62;
-              </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

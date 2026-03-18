@@ -39,7 +39,7 @@ export default function AboutSection() {
               </div>
               <div className={`${openSans.className}`}>
                 <p className='text-lg leading-relaxed mb-6'>
-                  Pastor Ayomide Idogun is the founder of CVA, a growing
+                  Pastor Ayomide Idogun is the founder of CVN, a growing
                   movement birthed out of obedience to God&apos;s call.
                 </p>
                 <p className='text-lg leading-relaxed'>

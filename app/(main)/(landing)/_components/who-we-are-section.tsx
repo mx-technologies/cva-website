@@ -14,12 +14,12 @@ export default function WhoWeAreSection() {
           <h1
             className={`text-2xl md:text-5xl font-bold text-gray-900 mb-6 ${playfairDisplay.className}`}
           >
-            An Army of Purpose, Faith, and Victory.
+            A People of Purpose, Faith, and Victory.
           </h1>
           <p
             className={`text-gray-700 leading-relaxed mb-6 ${openSans.className}`}
           >
-            Christ’s Victorious Army is a full-gospel, interdenominational, and
+            Christ’s Victorious Nation is a full-gospel, interdenominational, and
             non-denominational word-based ministry dedicated to ministering unto
             God, helping believers deepen their relationship with God and live
             lives of wholehearted service to Him. Whether you’re just starting
@@ -36,7 +36,7 @@ export default function WhoWeAreSection() {
             part in His divine plan.
           </p>
           <p className={`text-gray-700 leading-relaxed ${openSans.className}`}>
-            We are like the Joel 2 and Revelations 19 army, where the Lord
+            We are like the Joel 2 and Revelations 19 Nation, where the Lord
             Himself leads His people with strength and clarity. Each of us walks
             in our unique God-given purpose, yet we move together as one body,
             unified in mission. Our calling is global—every sector, every

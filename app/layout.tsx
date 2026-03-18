@@ -10,8 +10,8 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Christ's Victorious Army",
-  description: 'Transforming Lives Through God’s Word',
+  title: "Christ's Victorious Nation",
+  description: 'Raising a Victorious Nation for Christ',
 };
 
 export default function RootLayout({
