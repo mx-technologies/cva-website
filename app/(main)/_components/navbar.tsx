@@ -48,8 +48,9 @@ xl:px-14'
         {/* Logo */}
         <div className='flex items-center'>
           <div className='w-10 h-10'>
-            <Link href='/'>
-              <img src='/logo.png' alt='Logo' className='object-contain' />
+            <Link href='/' className='text-3xl'>
+              {/* <img src='/logo.png' alt='Logo' className='object-contain' /> */}
+              CVN
             </Link>
           </div>
         </div>
