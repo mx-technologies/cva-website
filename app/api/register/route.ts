@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 
 export async function POST(req: Request) {
   const body = await req.json();
-  const { fullName, email, phone, church, location, referral, prayer } = body;
+  const { fullName, email, phone, church, city, location, referral, prayer, freeTransportation, pickupBusStop, volunteering, volunteeringCategory } = body;
 
   console.log('BREVO KEY:', process.env.NEXT_BREVO_API_KEY);
   console.log('BREVO LIST:', process.env.NEXT_BREVO_LIST_ID);
@@ -22,9 +22,14 @@ export async function POST(req: Request) {
         ...(fullName && { FIRSTNAME: fullName }),
         ...(phone && { PHONE: phone }),
         ...(church && { CHURCH: church || '' }),
+        ...(city && { CITY: city || '' }),
         ...(location && { LOCATION: location || '' }),
         ...(referral && { REFERRAL: referral || '' }),
         ...(prayer && { PRAYER: prayer || '' }),
+        ...(freeTransportation && { FREE_TRANSPORTATION: freeTransportation || '' }),
+        ...(pickupBusStop && { PICKUP_BUS_STOP: pickupBusStop || '' }),
+        ...(volunteering && { VOLUNTEERING: volunteering || '' }),
+        ...(volunteeringCategory && { VOLUNTEERING_CATEGORY: volunteeringCategory || '' }),
       },
       listIds: [parseInt(process.env.NEXT_BREVO_LIST_ID!, 10)],
       updateEnabled: true,

@@ -15,7 +15,7 @@ export default function ResourcesPreviewGrid() {
         </CardHeader>
         <CardContent className='flex flex-col items-center'>
           <div className='w-full aspect-video rounded-lg overflow-hidden mb-3'>
-            <iframe data-testid="embed-iframe" style={{ borderRadius: '12px' }} src="https://open.spotify.com/embed/episode/0Kap3KftlZoJOOVDY4spFu?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe data-testid="embed-iframe" style={{ borderRadius: '12px' }} src="https://open.spotify.com/embed/episode/0Kap3KftlZoJOOVDY4spFu?utm_source=generator" width="100%" height="152" frameBorder="0" allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
           </div>
           <p className='text-sm text-gray-600 text-center'>
             Experience powerful moments from our recent Bible Study with Pastor

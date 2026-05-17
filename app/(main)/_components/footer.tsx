@@ -56,8 +56,8 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href='/wtk3.0' className='hover:text-primary-hover'>
-                    WTK 3.0
+                  <Link href='/sound-of-jubilee' className='hover:text-primary-hover'>
+                    Sound of Jubilee
                   </Link>
                 </li>
               </ul>
@@ -83,7 +83,7 @@ export default function Footer() {
                 objectFit='cover'
               />
             </Link>
-            &nbsp; Christ&apos;s Victorious Army, {new Date().getFullYear()}.
+            &nbsp; Christ&apos;s Victorious Nation, {new Date().getFullYear()}.
             All rights reserved
           </span>
           {/* Social Media Links */}
