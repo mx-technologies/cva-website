@@ -33,6 +33,9 @@ const SoundOfJubilee = () => {
       newErrors.email = 'Valid email is required';
     if (!formData.phone || formData.phone.length < 7)
       newErrors.phone = 'Valid phone number is required';
+    if (formData.volunteering === 'Yes' && !formData.volunteeringCategory) {
+      newErrors.volunteeringCategory = 'Please select a volunteer category';
+    }
     return newErrors;
   };
 
@@ -340,9 +343,14 @@ const SoundOfJubilee = () => {
             <select
               className='w-full rounded-xl border p-3 focus:outline-none focus:ring-2 focus:ring-[#8B0000]'
               value={formData.volunteering}
-              onChange={(e) =>
-                setFormData({ ...formData, volunteering: e.target.value })
-              }
+              onChange={(e) => {
+                const val = e.target.value;
+                setFormData({
+                  ...formData,
+                  volunteering: val,
+                  volunteeringCategory: val === 'Yes' ? formData.volunteeringCategory : '',
+                });
+              }}
             >
               <option value=''>Select</option>
               <option value='Yes'>Yes</option>
@@ -356,14 +364,23 @@ const SoundOfJubilee = () => {
               <label className='mb-1 block font-medium'>
                 If &quot;yes&quot;, please indicate what category
               </label>
-              <input
-                type='text'
+              <select
                 value={formData.volunteeringCategory}
                 onChange={(e) =>
                   setFormData({ ...formData, volunteeringCategory: e.target.value })
                 }
                 className='w-full rounded-xl border p-3 focus:outline-none focus:ring-2 focus:ring-[#8B0000]'
-              />
+              >
+                <option value=''>Select Category</option>
+                <option value='Welfare'>Welfare</option>
+                <option value='Logistics'>Logistics</option>
+                <option value='Protocol'>Protocol (Protocol Officers/Ushers)</option>
+                <option value='Content Team'>Content Team</option>
+                <option value='Media'>Media</option>
+              </select>
+              {errors.volunteeringCategory && (
+                <p className='text-red-600 text-sm mt-1'>{errors.volunteeringCategory}</p>
+              )}
             </div>
           )}
 
@@ -403,7 +420,7 @@ const SoundOfJubilee = () => {
           Stay updated and connected with others joining the program!
         </p>
         <a
-          href=''
+          href='https://chat.whatsapp.com/GBzGuhBuugO5xlZzGFLjtW'
           target='_blank'
           rel='noopener noreferrer'
           className='flex rounded-xl bg-[#8B0000] px-6 py-3 font-semibold text-white shadow-lg  hover:bg-red-900 transition gap-2 items-center'
