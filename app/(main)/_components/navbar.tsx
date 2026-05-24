@@ -47,10 +47,13 @@ xl:px-14'
       >
         {/* Logo */}
         <div className='flex items-center'>
-          <div className='w-10 h-10'>
+          <div className='w-20 h-20'>
             <Link href='/' className='text-3xl'>
-              {/* <img src='/logo.png' alt='Logo' className='object-contain' /> */}
-              CVN
+              <img
+                src='/logo.png'
+                alt='Logo'
+                className='object-contain w-full h-full'
+              />
             </Link>
           </div>
         </div>
@@ -84,8 +87,8 @@ xl:px-14'
         {/* Mobile Menu */}
         <div className='md:hidden'>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger>
-              <Button variant='ghost' onClick={() => setIsOpen(!isOpen)}>
+            <SheetTrigger asChild>
+              <Button variant='ghost'>
                 <svg
                   className='w-6 h-6'
                   fill='none'

@@ -18,8 +18,8 @@ export async function POST(req: Request) {
       'https://api.brevo.com/v3/smtp/email',
       {
         sender: {
-          email: 'no-reply@christsvictoriousarmy.org',
-          name: 'CV Army Website',
+          email: 'no-reply@christsvictoriousnation.org',
+          name: 'Christ\'s Victorious Nation',
         },
         to: [{ email: 'ayomide@christsvictoriousarmy.org' }],
         subject: `New Contact Form Message from ${firstName} ${lastName}`,
