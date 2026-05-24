@@ -9,7 +9,7 @@ const carouselItems = [
     image: '/images/p1.png',
     title: 'Sunday Services',
     description:
-      'More than a Bible study—it’s a training ground. Here, believers are equipped through sound teaching, prophetic insight, and deep fellowship to live boldly for Christ. Come hungry. Leave transformed.',
+      'A glorious time of worship, sound apostolic teaching, prophetic insight, and deep fellowship. Come and experience encounters that equip you to walk in your unique purpose and live victoriously',
     time: 'Sundays | 05:00 PM – 07:00 PM',
   },
 
