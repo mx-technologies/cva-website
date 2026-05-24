@@ -74,7 +74,7 @@ const ContactForm = () => {
             href='mailto:hello@christsvictoriousarmy.org'
             className='text-primary-main underline underline-offset-8'
           >
-            hello@christsvictoriousarmy.org
+            hello@christsvictoriousnation.org
           </a>
         </div>
       </div>
