@@ -116,7 +116,7 @@ const SoundOfJubilee = () => {
             transition={{ duration: 0.8 }}
             className={`mb-6 text-4xl md:text-6xl font-extrabold leading-tight drop-shadow-lg ${playfairDisplay.className}`}
           >
-            Sound of Jubilee
+            Sound of Freedom
           </motion.h1>
 
           <motion.p
