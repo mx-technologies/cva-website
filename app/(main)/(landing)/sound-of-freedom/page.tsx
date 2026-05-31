@@ -97,8 +97,8 @@ const SoundOfJubilee = () => {
         {/* Background Image */}
         <div className='absolute inset-0 z-0'>
           <Image
-            src='/images/Sound_of_jubilee_2026.jpeg'
-            alt='Sound of Jubilee'
+            src='/images/sound-of-freedom.jpeg'
+            alt='Sound of Freedom'
             fill
             priority
             className='object-cover'

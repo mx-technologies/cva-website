@@ -5,9 +5,6 @@ export async function POST(req: Request) {
   const body = await req.json();
   const { fullName, email, phone, church, city, location, referral, prayer, freeTransportation, pickupBusStop, volunteering, volunteeringCategory } = body;
 
-  console.log('BREVO KEY:', process.env.NEXT_BREVO_API_KEY);
-  console.log('BREVO LIST:', process.env.NEXT_BREVO_LIST_ID);
-
   const res = await fetch('https://api.brevo.com/v3/contacts', {
     method: 'POST',
     headers: {
