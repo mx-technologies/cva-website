@@ -56,8 +56,8 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href='/sound-of-freedom' className='hover:text-primary-hover'>
-                    Sound of Freedom
+                  <Link href='/a-new-vision' className='hover:text-primary-hover'>
+                    A new vision
                   </Link>
                 </li>
               </ul>
