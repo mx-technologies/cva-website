@@ -5,10 +5,15 @@ export async function POST(req: Request) {
   const body = await req.json();
   const { fullName, email, phone, church, city, location, referral, prayer, freeTransportation, pickupBusStop, volunteering, volunteeringCategory } = body;
 
+  const apiKey = process.env.NEXT_BREVO_API_KEY || '';
+  if (apiKey.startsWith('xsmtpsib-')) {
+    console.error('Brevo API Error: NEXT_BREVO_API_KEY in .env is an SMTP key ("xsmtpsib-..."). Brevo REST API requires an API key starting with "xkeysib-...". Generate one at Brevo Dashboard -> SMTP & API -> API Keys.');
+  }
+
   const res = await fetch('https://api.brevo.com/v3/contacts', {
     method: 'POST',
     headers: {
-      'api-key': process.env.NEXT_BREVO_API_KEY!,
+      'api-key': apiKey,
       'Content-Type': 'application/json',
       Accept: 'application/json',
     },
@@ -28,7 +33,7 @@ export async function POST(req: Request) {
         ...(volunteering && { VOLUNTEERING: volunteering || '' }),
         ...(volunteeringCategory && { VOLUNTEERING_CATEGORY: volunteeringCategory || '' }),
       },
-      listIds: [parseInt(process.env.NEXT_BREVO_LIST_ID!, 10)],
+      listIds: [parseInt(process.env.NEXT_BREVO_LIST_ID || '3', 10)],
       updateEnabled: true,
     }),
   });
@@ -37,8 +42,12 @@ export async function POST(req: Request) {
     const error = await res.json().catch(() => ({}));
     console.error('Brevo Error:', error);
 
+    const errorMessage = apiKey.startsWith('xsmtpsib-')
+      ? 'Brevo API Key error: NEXT_BREVO_API_KEY in .env is an SMTP Key (xsmtpsib-). Please replace it with a Brevo v3 API Key (xkeysib-) from Brevo Dashboard -> SMTP & API -> API Keys.'
+      : (error.message || 'Failed to register');
+
     return NextResponse.json(
-      { error: error.message || 'Failed to register' },
+      { error: errorMessage },
       { status: 500 }
     );
   }
